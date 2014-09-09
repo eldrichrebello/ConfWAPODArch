@@ -104,7 +104,7 @@
 
 % *** CITATION PACKAGES ***
 %
-%\usepackage{cite}
+\usepackage{cite}
 % cite.sty was written by Donald Arseneau
 % V1.6 and later of IEEEtran pre-defines the format of the cite.sty package
 % \cite{} output to follow that of IEEE. Loading the cite package will
@@ -129,7 +129,7 @@
 % *** GRAPHICS RELATED PACKAGES ***
 %
 \ifCLASSINFOpdf
-  % \usepackage[pdftex]{graphicx}
+  \usepackage[pdftex]{graphicx}
   % declare the path(s) where your graphic files are
   % \graphicspath{{../pdf/}{../jpeg/}}
   % and their extensions so you won't have to specify these with
@@ -306,7 +306,7 @@
 
 % *** PDF, URL AND HYPERLINK PACKAGES ***
 %
-%\usepackage{url}
+\usepackage{url}
 % url.sty was written by Donald Arseneau. It provides better support for
 % handling and breaking URLs. url.sty is already installed on most LaTeX
 % systems. The latest version and documentation can be obtained at:
@@ -347,7 +347,7 @@ Email: eldrich.rebello@aalto.fi}
 \IEEEauthorblockN{Homer Simpson}
 \IEEEauthorblockA{Kungliga Tekniska h\"{o}gskolan\\
 Stockholm, Sweden\\
-Email: luigiv@kth.se}
+Email: luigiv@kth.se}tre
 \and
 \IEEEauthorblockN{Md. Shoaib Almas}
 \IEEEauthorblockA{Kungliga Tekniska h\"{o}gskolan\\
@@ -391,7 +391,11 @@ Email: msalmas@kth.se}
 % As a general rule, do not put math, special symbols or citations
 % in the abstract
 \begin{abstract}
-The modern power grid is increasingly being used under operating conditions of increasing stress for which it was not designed. The increasing penetration levels of variable energy sources such as wind present significant grid stability issues. One of these stability issues is the phenomenon of low frequency, electro-mechanically induced, inter-area oscillations. Simulations have demonstrated the potential of Wide Area Measurement Signals (WAMS)-based Power Oscillation Damping (POD) in achieving improved electromechanical mode damping compared to traditional, local signal based, Power System Stabilizers (PSS). \iffalse Also, the adoption of synchrophasor measurement data from Phasor Measurement Units (PMU's) is rising annually.\fi This paper takes an established Phasor-based oscillation damping algorithm and combines it with modern PMU technology to implement a hardware prototype of a real-time oscillation damping control system using remote PMU signals sent over a communications network. The developed prototype is tested in real-time using a Hardware-in-the-loop approach in conjunction with the Klein-Rogers-Kundur two-area four-machine test system and is demonstrated to have applications independent of the controlled device.\end{abstract}
+
+The Phasor Power Oscillation Damping (Phasor POD) algorithm has been demonstrated to be effective at damping inter-area power system oscillations. Present implementations of the algorithm have been either in offline or real-time \textsc{Simulink} simulations. Previous research has demonstrated that wide-area signals are effective at achieving enhanced damping of inter-area modes. This work documents the design proposal and revision process for a real-time hardware prototype of the Phasor-POD algorithm on a Compact Reconfigurable Input Output (cRIO) controller from National Instruments. The real-world applicability of this design and the challenges faced together with the solutions implemented are also investigated.
+
+%The modern power grid is increasingly being used under operating conditions of increasing stress for which it was not designed. The increasing penetration levels of variable energy sources such as wind present significant grid stability issues. One of these stability issues is the phenomenon of low frequency, electro-mechanically induced, inter-area oscillations. Simulations have demonstrated the potential of Wide Area Measurement Signals (WAMS)-based Power Oscillation Damping (POD) in achieving improved electromechanical mode damping compared to traditional, local signal based, Power System Stabilizers (PSS). This paper documents the software architecture that was envisaged, refined and finally implemented in the development of a real-time implementation of the Phasor-Power Oscillation Damper (Phasor POD).Tests were conducted to verify the working and performance of the real-time algorithm implementation. The challenges faced and the solutions implemented are also documented here.
+\end{abstract}
 
 % no keywords
 
@@ -411,25 +415,37 @@ The modern power grid is increasingly being used under operating conditions of i
 
 
 \section{Introduction}
-% no \IEEEPARstart
-This demo file is intended to serve as a ``starter file''
-for IEEE conference papers produced under \LaTeX\ using
-IEEEtran.cls version 1.8 and later.
-% You must have at least 2 lines in the paragraph with the drop letter
-% (should never be an issue)
-I wish you the best of success.
+The goal of this paper is to document the architecture development process and challenges faced in the real-time implementation of \"{A}ngquist and Gama's\cite{PhasorPOD} Phasor Power Oscillation (Phasor POD) algorithm. For purposes of comparison, the real-time \textsc{Simulink} implementation of the Phasor POD algorithm by Almas and Vanfretti \cite{PhasorPODImplement} is used as a benchmark. The performance of the hardware prototype developed will be tested and compared to the performance of this implementation of the algorithm. The two-area four-machine model developed by Klein, Rogers and Kundur \cite{KundurTwoArea} is used as a test-case and is modified slightly to fit the requirements of this work. A Hardware-in-the-loop setup is constructed around the e\textsc{MEGASIM} real-time simulator from OPAL-RT \cite{OPALemegasim} with the two-area model running in real-time and a synchrophasor-based Phasor-POD algorithm running on a cRIO.
 
-\hfill mds
- 
-\hfill December 27, 2012
 
-\subsection{Subsection Heading Here}
+\begin{figure}[!th]
+\centering
+\includegraphics[width=2.5in]{SmarTSlabOutline.jpg}
+\caption{Simulation Results.}
+\label{fig_sim}
+\end{figure}
+
+\subsection{Previous Experiences}
 Subsection text here.
 
 
-\subsubsection{Subsubsection Heading Here}
-Subsubsection text here.
+\subsection{Paper Outline}
+This paper is organised as follows.
 
+\ref{background} presents this and that.
+
+\ref{arch} presents 
+
+\section{Background}\label{background}
+
+\section{Archtecture Development Process}\label{arch}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=2.5in]{RevisionFlow.png} 
+\caption{Iterative Revision Flow Diagram}
+\label{fig:RevisionFlow}
+\end{figure}
 
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
@@ -514,7 +530,68 @@ Subsubsection text here.
 % footnotes above bottom floats. This can be corrected via the \fnbelowfloat
 % command of the stfloats package.
 
+\section{Architecture Implementation and Refinement}
 
+Figure \ref{fig:RevisionFlow} shows a three stage design process with design proposal, implementation and revision. To begin with, only the controller specifications were available. These were used to draft a design proposal. An implementation attempt was made using this draft proposal. When the additional limits imposed by the software and hardware platforms were included, some goals of the original code would have to revised. With these limitations, the original design was modified to generate a revised design. An attempt was then made to implement this revised design. If further limitations were encountered, the design was further modified. This iterative process was repeated till a working implementation was reached.\\
+
+
+
+\subsubsection{Initial Design}
+%\begin{figure}[htb]
+%\centering
+%\includegraphics[width=1\linewidth]{./InitialArch}
+%\caption{Initial Software Architecture}
+%\label{fig:InitialArch}
+%\end{figure}
+
+Initially, the goal was to keep the controller (the cRIO) independent of any other devices. Such a controller would be able to take synchrophasor data (in the C37.118 format) directly from the network and extract measurement data. The architecture block diagram is shown in Figure  \ref{fig:InitialArch}. This controller was completely autonomous, with automated signal selection and processing. This design would be able to compute observability indices for the different input signals and then automatically select the one with the highest observability of a particular mode. This design also incorporated two control functions, a wide area control function and a local control function. The wide area control function selected for implementation was an inter-area oscillation damping control algorithm. The local control function would use locally available data and implement the control function in a manner similar to a Power System Stabiliser (PSS). Automatic switching between the two functions was also considered. If the signal to noise ratio in the wide area signal deteriorated or if the signal delay became prohibitively high, the controller would switch to the local signal or a back-up wide area signal automatically. The principal consideration in this design was the limited resources available on the FPGA and the complexity of the algorithms to be implemented. This required implementation of all algorithms and computation sections on the RT section of the cRIO. In addition, the RT controller has tremendous flexibility as algorithms are implemented using software, rather than hardware as on the FPGA. The RT controller also has more storage space available to implement algorithms. The trade-off was computation speed.\\
+
+This design was faced with a problem of differing loop rates. The real-time simulator runs at a 50$\mu$s time step. The RT controller on the cRIO is not capable of matching this speed. The fastest that it could run was 1ms. To address this issue, this architecture envisaged using the FPGA to perform interpolation between successive data points. The FPGA would run at a loop rate of 50 microseconds, to match the real-time simulator. The region between successive data points was to be interpolated using a suitable interpolation algorithm. Data generated by the FPGA was to be sent over the communication network back to the real-time simulator for use in the simulation.\\
+
+This design was changed due to limitations of different components. One, no software was available to read a synchrophasor stream on the RT controller and extract measurement data from the stream. This process had to be performed on a desktop computer running a real-time data mediator and LabVIEW.\\
+
+Two, data generated by the FPGA could not be sent to the real-time simulator directly over the communication network. Though possible, further work is required.\\
+
+Three, the process of data interpolation on the FPGA is complex. To achieve results better than with a simple linear interpolation, a history of past data points is required. This process is in itself complex and also introduces further delay. However, it is simpler than implementing the damping control algorithm on the FPGA. At this stage, FPGA limitations were the principal factor behind implementing the oscillation damping algorithm on the RT  controller.\\
+
+\subsubsection{Development and Revision}
+
+%\begin{figure}[htb]
+%\centering
+%\includegraphics[width=1\linewidth]{./Revision}
+%\caption{Revised Architecture}
+%\label{fig:Revision}
+%\end{figure}
+
+With the limitations of the initial architecture in mind, it was revised. In this architecture, the process of  extracting data from the synchrophasor stream was shifted to a workstation computer. The process of signal selection and signal processing was also moved to this computer. Once data was available, it would be sent to the RT controller, over a communication network. The damping control was kept on the RT  controller with the FPGA performing the interpolation required to match the read-interval of the real-time simulator. Besides the damping control algorithm, a local control function was maintained on the RT controller. This revision is shown in Figure \ref{fig:Revision}.\\
+
+Here, the complexity of implementing an interpolation algorithm on the FPGA was examined. It was realised that a simple linear interpolation algorithm would not be sufficient. Further, the FPGA output was limited by the speed of the RT controller as new data would only be available after a minimum of 1ms at the earliest (if the RT controller were to run at its maximum speed).\\
+
+An implementation of the damping control algorithm on the RT controller was also tested. The fastest execution speed that could be achieved was in excess of 25ms. This was slower than the reporting rate of the PMUs.\\
+
+Communication between the cRIO and the RT simulator using TCP/IP was also abandoned. Output values of the FPGA were instead hardwired to the real-time simulator's analogue inputs.\\
+
+\subsubsection{Final Implementation}
+
+%\begin{figure}[htb]
+%\centering
+%\includegraphics[width=1\linewidth]{./Final}
+%\caption{Final Software Architecture as Implemented}
+%\label{fig:Final}
+%\end{figure}
+
+
+At this stage, the damping control algorithm was moved to the FPGA with the RT controller being used only for network communication and data monitoring. The local control function was also discarded as it was found to reduce the response speed of the RT  controller. If needed, the local control function can be implemented on the FPGA. The FPGA is suited to tasks that are repetitive in nature. The FPGA also has a fast and predictable response time. With the oscillation damping algorithm implemented on the FPGA, resource utilization stood at 78\%. Space is still available if further functions need to be implemented on the FPGA. As with the previous design, the process of extracting data from the synchrophasor stream was done on a workstation computer. Signal selection and processing was also done on this computer. This was the final architecture as implemented.\\
+
+
+\section{Hardware-in-the-Loop Test}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=2.5in]{Final_RT_Arch.png} 
+\caption{Architecture Refinement Schematic}
+\label{Hardware_Outline}
+\end{figure}
 
 \section{Conclusion}
 The conclusion goes here.
@@ -562,6 +639,45 @@ The authors would like to thank...
 \bibitem{IEEEhowto:kopka}
 H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
   0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+
+\bibitem{PhasorPOD} 
+L.~\"{A}ngquist and C.~Gama  \emph{Damping Algorithm based on Phasor Estimation} in Power Engineering Society Winter Meeting, 2001. IEEE, Volume 3, pp. 1160 - 1165  
+
+\bibitem{KundurTwoArea} 
+M.~Klein, J. G.~Rogers and P.~Kundur \emph{A fundamental study of inter-area oscillations in Power Systems} IEEE Trans, PWRS, no. 6, pp. 914-921, 1991. 
+
+\bibitem{eMEGASIM} \emph{eMEGASIM Power Grid Real-Time Digital HArdware in the Loop Simulator} Available Online at : \url{http://www.opal-rt.com/}
+
+\bibitem{Dmello} F. P.~Dmello, and. \ C.~Concordia
+  \emph{Concepts of Synchronous Machine Stability as Affected by Excitation Control} IEEE TRANSACTIONS ON POWER APPARATUS AND SYSTEMS, vol. PAS 88, no. 4, 1969. 
+  
+\bibitem{localREMcomparison}  M. E.~Aboul-Ela, A. A.~Sallam, J. D.~McCalley and A. A.~Fouad, \emph{Damping Controller Design for Power System Oscillations Using Global Signals}, IEEE trans. on Power Systems, Vol. 11, No. 2, May 1996, pp. 767-773
+  
+\bibitem{PhasorPODImplement} M.~Shoaib Almas and L.~Vanfretti, \emph{Implementation of Conventional PSS and Phasor Based POD for Power Stabilizing Controls for Real-Time Simulation}, IEEE IES IECON14, 29 Oct-1 Nov, 2014, Dallas, USA.
+
+\bibitem{OPALemegasim} eMEGAsim PowerGrid Real-Time Digital Hardware in the Loop Simulator — Opal RT, [Online]. Available: \url{http://www.opal-rt.com/}
+
+\bibitem{Chaudhuri} N.S.~Chaudhuri, R.~Majumder and B~ Chaudhuri \emph{Interaction between conventional and adaptive phasor power oscillation damping controllers} in Power and Energy Society General Meeting, 2010 IEEE Minneapolis, MN, 2012 pp. 1-7
+
+\bibitem{SmarTSLab} L.~Vanfretti.; M.~Chenine; M.S.~Almas; R.~Leelaruji; L.~Angquist; L.~Nordstrom, "\emph{SmarTS Lab — A laboratory for developing applications for WAMPAC Systems}," Power and Energy Society General Meeting, 2012 IEEE , vol., no., pp.1,8, 22-26 July 2012
+
+\bibitem{sVARdamp} E.V~Larsen and E.H~Chow, General Electric Company, NY, \emph{Application of Static VAR Systems for System Dynamic Performance}, 1987 IEEE pp. 43-46
+
+\bibitem{Yuwa}  L.~Vanfretti, Y.~Chompoobutrgool, and J.H.~Chow, \emph{Chapter 10: Inter-Area Mode Analysis for Large Power Systems using Synchrophasor Data}, Book Chapter, in Coherency and Model Reduction of Large Power Systems, Joe H. Chow (Ed.), Springer, 2013. Available Online at \url{http://www.springer.com/energy/systems%2C+storage+and+harvesting/book/978-1-4614-1802-3}
+
+\bibitem{cRIO9081} \emph{Operating Instructions and Specifications Compact RIO NI cRIO-9081/9082}, National Instruments, Available Online at \url{http://www.ni.com/pdf/manuals/375714a.pdf}
+  
+\bibitem{cRIO9076} \emph{Operating Instructions and Specifications Compact RIO NI cRIO-9075/9076}, National Instruments, Available Online at \url{http://www.ni.com/pdf/manuals/375650b.pdf}
+
+\bibitem{LabviewTemplate} \emph{FPGA Control on Compact RIO Sample Project Documentation}, National Instruments, Available Online at \url{http://www.ni.com/white-paper/14137/en/}
+
+\bibitem{SDK} Vanfretti, Luigi and Aarstrand, Vemund H. and Almas, M. Shoaib and Peri\'c, Vedran S. and Gjerde, Jan O. , \emph{A Software Development Toolkit for Real-Time Synchrophasor Applications},  IEEE PES Grenoble PowerTech, 2013
+
+\bibitem{Chaudhuri} N.S~Chaudhuri, R~Majumder and B~Chaudhuri , \emph{Interaction between conventional and adaptive phasor power oscillation damping controllers} in Power and Energy Society General Meeting, 2010 IEEE Minneapolis, MN, 2012 pp. 1-7
+
+\bibitem{MATLABexample} I~Kamwa \emph{Performance of Three PSS for Interarea Oscillations} SimPowerSystems Examples, \textsc{Matlab} R2011a
+
+\bibitem{PSSDocumentation} \emph{Generic Power System Stabilizer} Documentation distributed with \textsc{Matlab} R2014a Available online at \url{http://www.mathworks.se/help/physmod/sps/powersys/ref/genericpowersystemstabilizer.html}
 
 \end{thebibliography}
 

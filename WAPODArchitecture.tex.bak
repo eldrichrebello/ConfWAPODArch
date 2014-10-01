@@ -275,7 +275,7 @@
 % http://www.ctan.org/tex-archive/macros/latex/base/
 
 
-%\usepackage{stfloats}
+\usepackage{stfloats}
 % stfloats.sty was written by Sigitas Tolusis. This package gives LaTeX2e
 % the ability to do double column floats at the bottom of the page as well
 % as the top. (e.g., "\begin{figure*}[!b]" is not normally possible in
@@ -392,7 +392,9 @@ Email: msalmas@kth.se}
 % in the abstract
 \begin{abstract}
 
-The Phasor Power Oscillation Damping (Phasor POD) algorithm has been demonstrated to be effective at damping inter-area power system oscillations. Present implementations of the algorithm have been either in offline or real-time \textsc{Simulink} simulations. Previous research has demonstrated that wide-area signals are effective at achieving enhanced damping of inter-area modes. This work documents the design proposal and revision process for a real-time hardware prototype of the Phasor-POD algorithm on a Compact Reconfigurable Input Output (cRIO) controller from National Instruments. The real-world applicability of this design and the challenges faced together with the solutions implemented are also investigated.
+%The Phasor Power Oscillation Damping (Phasor POD) algorithm has been demonstrated to be effective at damping inter-area power system oscillations. Present implementations of the algorithm have been either in offline or real-time \textsc{Simulink} simulations. Previous research has demonstrated that wide-area signals are effective at achieving enhanced damping of inter-area modes. This work documents the design proposal and revision process for a real-time hardware prototype of the Phasor-POD algorithm on a Compact Reconfigurable Input Output (cRIO) controller from National Instruments. The real-world applicability of this design and the challenges faced together with the solutions implemented are also investigated.\\
+
+Low-frequency, electromechanically induced, inter-area oscillations are posing an increasing threat to the stability of the modern, interconnected power grid. Wide Area Monitoring, Protection and Control (WAMPAC) systems based on wide-area measurements such as synchrophasor (C37.118) data can be deployed to address the inter-area oscillation problem. This work develops a hardware prototype of a synchrophasor-based oscillation damping control system. A Compact Reconfigurable Input Output (cRIO) controller from National Instruments is used to develop the real-time prototype. This paper presents the design process followed for the development of the software architecture. The three step process followed viz. design proposal, design refinement and finally attempted implementation is detailed. The goals of the design, the challenges faced and the refinements necessary are also presented. The design implemented is tested and validated on OPAL RT's e\textsc{megasim} real-time simulation platform and a brief discussion of the results is also included.
 
 %The modern power grid is increasingly being used under operating conditions of increasing stress for which it was not designed. The increasing penetration levels of variable energy sources such as wind present significant grid stability issues. One of these stability issues is the phenomenon of low frequency, electro-mechanically induced, inter-area oscillations. Simulations have demonstrated the potential of Wide Area Measurement Signals (WAMS)-based Power Oscillation Damping (POD) in achieving improved electromechanical mode damping compared to traditional, local signal based, Power System Stabilizers (PSS). This paper documents the software architecture that was envisaged, refined and finally implemented in the development of a real-time implementation of the Phasor-Power Oscillation Damper (Phasor POD).Tests were conducted to verify the working and performance of the real-time algorithm implementation. The challenges faced and the solutions implemented are also documented here.
 \end{abstract}
@@ -415,19 +417,21 @@ The Phasor Power Oscillation Damping (Phasor POD) algorithm has been demonstrate
 
 
 \section{Introduction}
-The goal of this paper is to document the architecture development process and challenges faced in the real-time implementation of \"{A}ngquist and Gama's\cite{PhasorPOD} Phasor Power Oscillation (Phasor POD) algorithm. For purposes of comparison, the real-time \textsc{Simulink} implementation of the Phasor POD algorithm by Almas and Vanfretti \cite{PhasorPODImplement} is used as a benchmark. The performance of the hardware prototype developed will be tested and compared to the performance of this implementation of the algorithm. The two-area four-machine model developed by Klein, Rogers and Kundur \cite{KundurTwoArea} is used as a test-case and is modified slightly to fit the requirements of this work. A Hardware-in-the-loop setup is constructed around the e\textsc{MEGASIM} real-time simulator from OPAL-RT \cite{OPALemegasim} with the two-area model running in real-time and a synchrophasor-based Phasor-POD algorithm running on a cRIO.
+The goal of this paper is to document the architecture development process and challenges faced in the real-time implementation of \"{A}ngquist and Gama's\cite{PhasorPOD} Phasor Power Oscillation (Phasor POD) algorithm. For purposes of comparison, the real-time \textsc{Simulink} implementation of the Phasor POD algorithm by Almas and Vanfretti \cite{PhasorPODImplement} is used as a benchmark. The performance of the hardware prototype developed will be tested and compared to the performance of this implementation of the algorithm. The two-area four-machine model developed by Klein, Rogers and Kundur \cite{KundurTwoArea} is used as a test-case and is modified to fit the requirements of this work. A Hardware-in-the-loop setup is constructed around the e\textsc{MEGASIM} real-time simulator from OPAL-RT \cite{OPALemegasim} with the two-area model running in real-time and a synchrophasor-based Phasor-POD algorithm running on a cRIO (Figure \ref{Data_path}).
 
 
-\begin{figure}[!th]
+\begin{figure*}[!t]
 \centering
-\includegraphics[width=2.5in]{SmarTSlabOutline.jpg}
-\caption{Simulation Results.}
-\label{fig_sim}
-\end{figure}
+		\includegraphics[width=5in]{DataFlow.png}
+\caption{General Outline for data flow with digital and analogue components indicated}
+\label{Data_path}
+\end{figure*}
+
+\subsection{Background}
+The growth of power system interconnections between previously unconnected areas has given rise to the phenomenon of inter-area oscillations. These are low frequency (0.1-2 Hz.) oscillations where the generators of one synchronous area oscillate against those of another area. Damping for these oscillations is generally poor and if they are allowed to grow, they can lead to disconnection of the ties or a collapse of the power system. A famous example of the latter was the August 1996 blackout of the WSCC system in the USA \cite{NAERC}. Although the purpose of system interconnection was to increase stability, the present situation of the power system incorporates renewable energy sources and power trading corridors, both of which impact system stability.\\
 
 \subsection{Previous Experiences}
-Subsection text here.
-
+Modern solutions to this problem involve using Power System Stabilisers (PSS) with locally available signals. These are effective at damping intra-area modes with good observability but may not be as effective at damping inter-area modes \cite{Dmello}. A theoretical analysis of the advantages of using wide-area signals as a damping input is presented in \cite{Yuwa}. Field-test experiences with WAPOD controllers from Norway and China are presented in \cite{WAPODNorway} and \cite{WAPODChina} respectively.
 
 \subsection{Paper Outline}
 This paper is organised as follows.
@@ -438,8 +442,8 @@ This paper is organised as follows.
 
 \section{Background}\label{background}
 
-\section{Archtecture Development Process}\label{arch}
-
+\section{Architecture Development Process}\label{arch}
+The primary design goal of the software was modularity.
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=2.5in]{RevisionFlow.png} 
@@ -447,31 +451,14 @@ This paper is organised as follows.
 \label{fig:RevisionFlow}
 \end{figure}
 
-% An example of a floating figure using the graphicx package.
-% Note that \label must occur AFTER (or within) \caption.
-% For figures, \caption should occur after the \includegraphics.
-% Note that IEEEtran v1.7 and later has special internal code that
-% is designed to preserve the operation of \label within \caption
-% even when the captionsoff option is in effect. However, because
-% of issues like this, it may be the safest practice to put all your
-% \label just after \caption rather than within \caption{}.
-%
-% Reminder: the "draftcls" or "draftclsnofoot", not "draft", class
-% option should be used if it is desired that the figures are to be
-% displayed while in draft mode.
-%
-%\begin{figure}[!t]
-%\centering
-%\includegraphics[width=2.5in]{myfigure}
-% where an .eps filename suffix will be assumed under latex, 
-% and a .pdf suffix will be assumed for pdflatex; or what has been declared
-% via \DeclareGraphicsExtensions.
-%\caption{Simulation Results.}
-%\label{fig_sim}
-%\end{figure}
 
-% Note that IEEE typically puts floats only at the top, even when this
-% results in a large percentage of a column being occupied by floats.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=2.5in]{Revision.png} 
+\caption{Iterative Revision Flow Diagram}
+\label{Revision1}
+\end{figure}
 
 
 % An example of a double column floating figure using two subfigures.
@@ -580,6 +567,12 @@ Communication between the cRIO and the RT simulator using TCP/IP was also abando
 %\label{fig:Final}
 %\end{figure}
 
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=2.5in]{ControllerArch.png} 
+\caption{Architecture Refinement Schematic}
+\label{RTControllerArch}
+\end{figure}
 
 At this stage, the damping control algorithm was moved to the FPGA with the RT controller being used only for network communication and data monitoring. The local control function was also discarded as it was found to reduce the response speed of the RT  controller. If needed, the local control function can be implemented on the FPGA. The FPGA is suited to tasks that are repetitive in nature. The FPGA also has a fast and predictable response time. With the oscillation damping algorithm implemented on the FPGA, resource utilization stood at 78\%. Space is still available if further functions need to be implemented on the FPGA. As with the previous design, the process of extracting data from the synchrophasor stream was done on a workstation computer. Signal selection and processing was also done on this computer. This was the final architecture as implemented.\\
 
@@ -591,6 +584,13 @@ At this stage, the damping control algorithm was moved to the FPGA with the RT c
 \includegraphics[width=2.5in]{Final_RT_Arch.png} 
 \caption{Architecture Refinement Schematic}
 \label{Hardware_Outline}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=2.5in]{FPGAOnly.png} 
+\caption{Architecture Refinement Schematic}
+\label{FPGA_Blocks}
 \end{figure}
 
 \section{Conclusion}
@@ -606,11 +606,9 @@ The conclusion goes here.
 \section*{Acknowledgment}
 
 
-The authors would like to thank...
-
-
-
-
+M.S. Almas is supported by the STRON$g^{2}$rid project, funded by Nordic Energy Research.\\
+L. Vanfretti is supported in part by the STRON$g^{2}$rid project, funded by Nordic Energy Research, in part by the STandUP for Energy collaboration initiative and also by the KTH School of Electrical Engineering.\\
+The generosity of Schweitzer Engineering Laboratories, Pullman, WA, USA for their donation of protection relays and Megger/Programma, T\"{a}by, Sweden for their donation of numerous pieces of hardware and their technical support is deeply acknowledged.
 
 % trigger a \newpage just before the given reference
 % number - used to balance the columns on the last page

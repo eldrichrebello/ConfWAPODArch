@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.1.27)  9 SEP 2014 16:56
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.12.28)  1 OCT 2014 14:02
 entering extended mode
  %&-line parsing enabled.
 **WAPODArchitecture.tex
@@ -121,8 +121,105 @@ File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
 \Gin@req@height=\dimen117
 \Gin@req@width=\dimen118
 )
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip44
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-texlive/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen119
+))
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen120
+)
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count93
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count94
+\leftroot@=\count95
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count96
+\DOTSCASE@=\count97
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen121
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count98
+\c@MaxMatrixCols=\count99
+\dotsspace@=\muskip10
+\c@parentequation=\count100
+\dspbrk@lvl=\count101
+\tag@help=\toks17
+\row@=\count102
+\column@=\count103
+\maxfields@=\count104
+\andhelp@=\toks18
+\eqnshift@=\dimen122
+\alignsep@=\dimen123
+\tagshift@=\dimen124
+\tagwidth@=\dimen125
+\totwidth@=\dimen126
+\lineht@=\dimen127
+\@envbody=\toks19
+\multlinegap=\skip45
+\multlinetaggap=\skip46
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/share/texmf-texlive/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(/usr/share/texmf-texlive/tex/latex/caption/caption3.sty
+Package: caption3 2009/10/09 v3.1k caption3 kernel (AR)
+\captionmargin=\dimen128
+\captionmargin@=\dimen129
+\captionwidth=\dimen130
+\caption@indent=\dimen131
+\caption@parindent=\dimen132
+\caption@hangindent=\dimen133
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used on input line 1068.
+)
+\c@KVtest=\count105
+\sf@farskip=\skip47
+\sf@captopadj=\dimen134
+\sf@capskip=\skip48
+\sf@nearskip=\skip49
+\c@subfigure=\count106
+\c@subfigure@save=\count107
+\c@lofdepth=\count108
+\c@subtable=\count109
+\c@subtable@save=\count110
+\c@lotdepth=\count111
+\sf@top=\skip50
+\sf@bottom=\skip51
+)
+(/usr/share/texmf-texlive/tex/latex/base/fixltx2e.sty
+Package: fixltx2e 2006/09/13 v1.1m fixes to LaTeX
+LaTeX Info: Redefining \em on input line 420.
+LaTeX Info: The control sequence `\[' is already robust on input line 471.
+LaTeX Info: The control sequence `\]' is already robust on input line 472.
+)
+(/usr/share/texmf-texlive/tex/latex/sttools/stfloats.sty
+Package: stfloats 1999/10/22
+\@dblbotnum=\count112
+\c@dblbotnumber=\count113
+)
 (/usr/share/texmf-texlive/tex/latex/ltxmisc/url.sty
-\Urlmuskip=\muskip10
+\Urlmuskip=\muskip11
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 ) (./WAPODArchitecture.aux
 
@@ -131,167 +228,308 @@ LaTeX Warning: Label `Chaudhuri' multiply defined.
 )
 \openout1 = `WAPODArchitecture.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 330.
-LaTeX Font Info:    ... okay on input line 330.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 330.
-LaTeX Font Info:    ... okay on input line 330.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 330.
-LaTeX Font Info:    ... okay on input line 330.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 330.
-LaTeX Font Info:    ... okay on input line 330.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 330.
-LaTeX Font Info:    ... okay on input line 330.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 330.
-LaTeX Font Info:    ... okay on input line 330.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 314.
+LaTeX Font Info:    ... okay on input line 314.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 314.
+LaTeX Font Info:    ... okay on input line 314.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 314.
+LaTeX Font Info:    ... okay on input line 314.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 314.
+LaTeX Font Info:    ... okay on input line 314.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 314.
+LaTeX Font Info:    ... okay on input line 314.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 314.
+LaTeX Font Info:    ... okay on input line 314.
  (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count93
-\scratchdimen=\dimen119
-\scratchbox=\box27
-\nofMPsegments=\count94
-\nofMParguments=\count95
-\everyMPshowfont=\toks16
-\MPscratchCnt=\count96
-\MPscratchDim=\dimen120
-\MPnumerator=\count97
-\everyMPtoPDFconversion=\toks17
+\scratchcounter=\count114
+\scratchdimen=\dimen135
+\scratchbox=\box29
+\nofMPsegments=\count115
+\nofMParguments=\count116
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count117
+\MPscratchDim=\dimen136
+\MPnumerator=\count118
+\everyMPtoPDFconversion=\toks22
 )
+Package caption Info: Begin \AtBeginDocument code.
+Package caption3 Info: subfig package 1.2 or 1.3 is loaded.
+LaTeX Info: Redefining \subref on input line 314.
+Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/sc' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/sc' tried instead on input line 395.
- <SmarTSlabOutline.jpg, id=1, 755.82375pt x 551.05875pt>
-File: SmarTSlabOutline.jpg Graphic file (type jpg)
+(Font)              Font shape `OT1/ptm/b/sc' tried instead on input line 381.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 404.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 404.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 404.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 404.
+ <DataFlow.png, id=1, 469.2732pt x 247.1634pt>
+File: DataFlow.png Graphic file (type png)
+ <use DataFlow.png>
 
-<use SmarTSlabOutline.jpg> <RevisionFlow.png, id=2, 1287.3696pt x 288.1164pt>
-File: RevisionFlow.png Graphic file (type png)
+LaTeX Warning: Citation `NAERC' on page 1 undefined on input line 415.
 
-<use RevisionFlow.png>
-Underfull \hbox (badness 2027) in paragraph at lines 535--536
-\OT1/ptm/m/n/10 the con-troller spec-i-fi-ca-tions were avail-able. These were
+
+Underfull \hbox (badness 7777) in paragraph at lines 415--416
+\OT1/ptm/m/n/10 pre-vi-ously un-con-nected ar-eas has given rise to the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 535--536
+Underfull \hbox (badness 5374) in paragraph at lines 415--416
+\OT1/ptm/m/n/10 phe-nomenon of inter-area os-cil-la-tions. These are low
+ []
+
+
+Underfull \hbox (badness 3128) in paragraph at lines 415--416
+\OT1/ptm/m/n/10 was to in-crease sta-bil-ity, the present sit-u-a-tion of the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 415--416
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 430--431
 
  []
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <./SmarTSlabOutline.jpg> <./RevisionFlow.png>]
+]
+Underfull \hbox (badness 10000) in paragraph at lines 440--441
 
-LaTeX Warning: Reference `fig:InitialArch' on page 2 undefined on input line 54
+ []
+
+
+Underfull \hbox (badness 7832) in paragraph at lines 443--444
+ \OT1/ptm/m/it/10 Real-Time Con-troller: [] \OT1/ptm/m/n/10 The real-time im-pl
+e-men-ta-tion
+ []
+
+
+Underfull \hbox (badness 2119) in paragraph at lines 443--444
+\OT1/ptm/m/n/10 the Com-pact Re-con-fig-urable In-put Out-put (cRIO) from
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 443--444
+
+ []
+
+
+Underfull \hbox (badness 2229) in paragraph at lines 446--447
+ \OT1/ptm/m/it/10 Pha-sor Mea-sure-ment Units: [] \OT1/ptm/m/n/10 The in-puts t
+o the real-
+ []
+
+
+Underfull \hbox (badness 2521) in paragraph at lines 446--447
+\OT1/ptm/m/n/10 time con-troller would come from a C37.118-compliant
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 446--447
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 449--450
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 452--453
+
+ []
+
+[2 <./DataFlow.png>] <RevisionFlow.png, id=22, 1287.3696pt x 288.1164pt>
+File: RevisionFlow.png Graphic file (type png)
+
+<use RevisionFlow.png>
+Overfull \hbox (0.94499pt too wide) in paragraph at lines 469--470
+ [][] 
+ []
+
+
+Underfull \hbox (badness 1466) in paragraph at lines 474--475
+\OT1/ptm/m/n/10 it-self. As an im-ple-men-ta-tion on this hard-ware had not
+ []
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 474--475
+\OT1/ptm/m/n/10 been at-tempted ear-lier, the lim-i-ta-tions of the hard-ware
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 474--475
+
+ []
+
+<Revision.png, id=23, 1495.0254pt x 323.7696pt>
+File: Revision.png Graphic file (type png)
+ <use Revision.png>
+Overfull \hbox (0.94499pt too wide) in paragraph at lines 478--479
+ [][] 
+ []
+
+
+Underfull \hbox (badness 2027) in paragraph at lines 485--486
+\OT1/ptm/m/n/10 the con-troller spec-i-fi-ca-tions were avail-able. These were
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 485--486
+
+ []
+
+
+LaTeX Warning: Reference `fig:InitialArch' on page 3 undefined on input line 49
 7.
 
 
-Underfull \hbox (badness 2359) in paragraph at lines 547--548
+Underfull \hbox (badness 2359) in paragraph at lines 497--498
 \OT1/ptm/m/n/10 Sta-biliser (PSS). Au-to-matic switch-ing be-tween the two
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 547--548
-
- []
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 549.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 549.
-
-Underfull \hbox (badness 10000) in paragraph at lines 549--550
+Underfull \hbox (badness 10000) in paragraph at lines 497--498
 
  []
 
 
-Underfull \hbox (badness 1430) in paragraph at lines 551--552
+Underfull \hbox (badness 10000) in paragraph at lines 499--500
+
+ []
+
+
+Underfull \hbox (badness 1430) in paragraph at lines 501--502
 \OT1/ptm/m/n/10 com-po-nents. One, no soft-ware was avail-able to read a
  []
 
 
-Underfull \hbox (badness 1838) in paragraph at lines 551--552
+Underfull \hbox (badness 1838) in paragraph at lines 501--502
 \OT1/ptm/m/n/10 syn-chropha-sor stream on the RT con-troller and ex-tract
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 551--552
+Underfull \hbox (badness 10000) in paragraph at lines 501--502
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 553--554
+Underfull \hbox (badness 10000) in paragraph at lines 503--504
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 555--556
+Underfull \hbox (badness 10000) in paragraph at lines 505--506
 
  []
 
 
-LaTeX Warning: Reference `fig:Revision' on page 2 undefined on input line 566.
+LaTeX Warning: Reference `fig:Revision' on page 3 undefined on input line 516.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 566--567
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 568--569
+Underfull \hbox (badness 10000) in paragraph at lines 516--517
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 570--571
+Underfull \vbox (badness 3701) has occurred while \output is active []
+
+ [3 <./RevisionFlow.png> <./Revision.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 518--519
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 572--573
+Underfull \hbox (badness 10000) in paragraph at lines 520--521
 
  []
 
 
-Underfull \hbox (badness 1881) in paragraph at lines 584--585
+Underfull \hbox (badness 10000) in paragraph at lines 522--523
+
+ []
+
+<ControllerArch.png, id=29, 1601.5032pt x 668.2566pt>
+File: ControllerArch.png Graphic file (type png)
+ <use ControllerArch.png>
+Underfull \hbox (badness 1881) in paragraph at lines 540--541
  \OT1/ptm/m/it/10 3) Fi-nal Im-ple-men-ta-tion: [][] \OT1/ptm/m/n/10 At this st
 age, the damp-ing
  []
 
 
-Underfull \hbox (badness 2772) in paragraph at lines 584--585
+Underfull \hbox (badness 2772) in paragraph at lines 540--541
 \OT1/ptm/m/n/10 con-troller be-ing used only for net-work com-mu-ni-ca-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 584--585
+Underfull \hbox (badness 10000) in paragraph at lines 540--541
 
  []
 
-[2] <Final_RT_Arch.png, id=17, 1936.836pt x 356.532pt>
+<Final_RT_Arch.png, id=30, 2169.5454pt x 357.9774pt>
 File: Final_RT_Arch.png Graphic file (type png)
  <use Final_RT_Arch.png>
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 640.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 640.
+Overfull \hbox (0.94499pt too wide) in paragraph at lines 547--548
+ [][] 
+ []
+
+<FPGAOnly.png, id=31, 736.351pt x 596.629pt>
+File: FPGAOnly.png Graphic file (type png)
+ <use FPGAOnly.png> [4 <./ControllerArch.png> <./Final_RT_Arch.png> <./FPGAOnly
+.png>]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
+
+Underfull \hbox (badness 10000) in paragraph at lines 625--626
+[]\OT1/ptm/m/it/8 Selecting a De-vel-op-ment Ap-proach\OT1/ptm/m/n/8 , Cen-tre 
+for Medi-care
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 625--626
+\OT1/ptm/m/n/8 and Med-i-caid Ser-vices, USA, Febru-ary 17, 2005, Ac-cessed
+ []
+
+
+Underfull \hbox (badness 7540) in paragraph at lines 625--626
+\OT1/ptm/m/n/8 on 01 Oc-to-ber 2014 Avail-able On-line at $http : / / www . cms
+ . gov /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 625--626
+\OT1/ptm/m/n/8 Research-[]Statistics-[]Data-[]and-[]Systems / CMS-[]Information
+-[]Technology /
+ []
+
 Missing character: There is no â in font ptmri7t!
 Missing character: There is no € in font ptmri7t!
 Missing character: There is no ” in font ptmri7t!
 
-Underfull \hbox (badness 1430) in paragraph at lines 666--667
+Underfull \hbox (badness 1430) in paragraph at lines 633--634
 \OT1/ptm/m/it/8 Area Mode Anal-y-sis for Large Power Sys-tems us-ing Syn-chroph
 a-
  []
 
 
-Underfull \hbox (badness 1584) in paragraph at lines 666--667
+Underfull \hbox (badness 1584) in paragraph at lines 633--634
 \OT1/ptm/m/it/8 sor Data\OT1/ptm/m/n/8 , Book Chap-ter, in Co-herency and Model
  Re-duc-tion of
  []
 
 
-Underfull \hbox (badness 1762) in paragraph at lines 666--667
+Underfull \hbox (badness 1762) in paragraph at lines 633--634
 \OT1/ptm/m/n/8 able On-line at $http : / / www . springer . com / energy / syst
 ems % 2C + storage +
  []
@@ -307,7 +545,9 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[3 <./Final_RT_Arch.png>] (./WAPODArchitecture.aux)
+[5
+
+] (./WAPODArchitecture.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -316,21 +556,27 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 1822 strings out of 494799
- 27777 string characters out of 1177748
- 85018 words of memory out of 3000000
- 5029 multiletter control sequences out of 15000+50000
- 42247 words of font info for 76 fonts, out of 3000000 for 9000
+ 3151 strings out of 494799
+ 47293 string characters out of 1177747
+ 114490 words of memory out of 3000000
+ 6323 multiletter control sequences out of 15000+50000
+ 44910 words of font info for 79 fonts, out of 3000000 for 9000
  215 hyphenation exceptions out of 8191
- 26i,8n,21p,1785b,289s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,8n,38p,1785b,291s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
-ve/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/ty
-pe1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmbi8
-a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/te
-xmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on WAPODArchitecture.pdf (3 pages, 545439 bytes).
+ve/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/ty
+pe1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/public/
+amsfonts/cm/cmmi5.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
+cmmi7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></
+usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/tex
+mf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/
+fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-texlive/fonts/type1/
+urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmbi8a.pf
+b></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-
+texlive/fonts/type1/urw/times/utmri8a.pfb>
+Output written on WAPODArchitecture.pdf (5 pages, 914954 bytes).
 PDF statistics:
- 39 PDF objects out of 1000 (max. 8388607)
+ 80 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

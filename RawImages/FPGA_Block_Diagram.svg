@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="FPGA_Block_Diagram.svg">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lstart"
+       style="overflow:visible">
+      <path
+         id="path3868"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt"
+         transform="scale(0.8) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;">
+      <path
+         id="path3871"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend-2"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3871-3"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend-26"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3871-2"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend-8"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3871-24"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker3992"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3994"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="-530.46384"
+     inkscape:cy="535.74481"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1138"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3827"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion3829"><rect
+           id="rect3831"
+           width="63.63961"
+           height="56.568542"
+           x="510.12704"
+           y="297.77823" /></flowRegion><flowPara
+         id="flowPara3833" /></flowRoot>    <g
+       id="g3084"
+       transform="translate(-662.66007,-8.0812269)"
+       inkscape:export-filename="Z:\Class Work\Thesis - KTH\Extra Work\Papers\ConferencePaper1\FPGAOnly.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <g
+         id="g3078">
+        <text
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+           x="129.43207"
+           y="224.79471"
+           id="text3755"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3757"
+             x="129.43207"
+             y="224.79471"
+             dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.0099999998"
+             style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Garamond;-inkscape-font-specification:Garamond">FPGA Loop, every 50</tspan></text>
+        <text
+           sodipodi:linespacing="125%"
+           xml:space="preserve"
+           x="545.73926"
+           y="224.71658"
+           style="font-size:13.80047035px;font-style:normal;font-weight:normal;text-align:start;line-height:125%;text-anchor:start;fill:#000000;font-family:Calibri"
+           id="text3841"><tspan
+             id="tspan3852"
+             style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Garamond;-inkscape-font-specification:Garamond">µs</tspan></text>
+      </g>
+      <text
+         id="text3843"
+         style="font-size:13.80047035px;font-style:normal;font-weight:normal;text-align:start;text-anchor:start;fill:#000000;font-family:Calibri"
+         y="216.48627"
+         x="566.96411"
+         xml:space="preserve"> </text>
+    </g>
+    <rect
+       style="fill:none;stroke-linecap:square"
+       id="rect4854"
+       width="107.85714"
+       height="55"
+       x="326.42856"
+       y="455.21933"
+       inkscape:export-filename="D:\Eldrich\Data_Plots\Report - Controller Testing\Figures\path7966.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       style="fill:none;stroke-linecap:square"
+       id="rect4856"
+       width="102.85714"
+       height="57.857143"
+       x="301.42856"
+       y="446.64792"
+       inkscape:export-filename="D:\Eldrich\Data_Plots\Report - Controller Testing\Figures\path7966.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       style="fill:none;stroke-linecap:square"
+       id="rect4858"
+       width="104.28571"
+       height="54.285713"
+       x="271.42856"
+       y="330.21933"
+       inkscape:export-filename="D:\Eldrich\Data_Plots\Report - Controller Testing\Figures\path7966.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <g
+       id="g3927"
+       transform="translate(-650.93129,-178.94756)"
+       inkscape:export-filename="Z:\Class Work\Thesis - KTH\Extra Work\Papers\ConferencePaper1\FPGAOnly.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <rect
+         y="431.67245"
+         x="236.04445"
+         height="92.428093"
+         width="174.02789"
+         id="rect2985-1"
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <flowRoot
+         transform="translate(76.965622,104.10286)"
+         style="font-size:30px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         id="flowRoot5448"
+         xml:space="preserve"><flowRegion
+           id="flowRegion5450"><rect
+             y="341.71988"
+             x="201.27289"
+             height="69.700508"
+             width="89.145966"
+             id="rect5452"
+             style="font-size:30px;text-align:center;text-anchor:middle" /></flowRegion><flowPara
+           style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Garamond;-inkscape-font-specification:Garamond"
+           id="flowPara5454">Phasor</flowPara><flowPara
+           style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Garamond;-inkscape-font-specification:Garamond"
+           id="flowPara3281">POD</flowPara></flowRoot>    </g>
+    <g
+       id="g3092"
+       transform="translate(-1036.8962,122.48227)"
+       inkscape:export-filename="Z:\Class Work\Thesis - KTH\Extra Work\Papers\ConferencePaper1\FPGAOnly.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <rect
+         y="273.07251"
+         x="247.7411"
+         height="82.189278"
+         width="179.09213"
+         id="rect5483"
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <flowRoot
+         transform="translate(37.38385,17.80489)"
+         style="font-size:30px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans"
+         id="flowRoot5485"
+         xml:space="preserve"><flowRegion
+           id="flowRegion5487"><rect
+             style="font-size:30px;text-align:center;text-anchor:middle;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+             y="264.19064"
+             x="227.91566"
+             height="75.40802"
+             width="143.41257"
+             id="rect5489" /></flowRegion><flowPara
+           style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Garamond;-inkscape-font-specification:Garamond"
+           id="flowPara5491">Control</flowPara><flowPara
+           style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Garamond;-inkscape-font-specification:Garamond"
+           id="flowPara5493">Parameters </flowPara></flowRoot>    </g>
+    <g
+       id="g3104"
+       transform="translate(-741.15373,-162.05758)"
+       inkscape:export-filename="Z:\Class Work\Thesis - KTH\Extra Work\Papers\ConferencePaper1\FPGAOnly.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <rect
+         y="423.41379"
+         x="796.43665"
+         height="75.165459"
+         width="159.08649"
+         id="rect6486-1"
+         style="fill:none;stroke:#000000;stroke-width:1.91335702;stroke-opacity:1" />
+      <flowRoot
+         transform="translate(414.7836,17.443829)"
+         style="font-size:30px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         id="flowRoot6488-2"
+         xml:space="preserve"><flowRegion
+           id="flowRegion6490-6"><rect
+             style="font-size:30px"
+             y="407.89789"
+             x="387.85715"
+             height="75.171509"
+             width="146.4722"
+             id="rect6492-0" /></flowRegion><flowPara
+           id="flowPara6921"
+           style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Garamond;-inkscape-font-specification:Garamond">Hard Wired</flowPara><flowPara
+           id="flowPara3102"
+           style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Garamond;-inkscape-font-specification:Garamond">Output</flowPara></flowRoot>    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-mid:url(#Arrow1Lend);marker-end:url(#Arrow1Lend)"
+       d="m -607.79275,298.93894 188.3879,0"
+       id="path3862"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="Z:\Class Work\Thesis - KTH\Extra Work\Papers\ConferencePaper1\FPGAOnly.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot7109"
+       style="font-size:30px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(-626.85763,-54.010258)"
+       inkscape:export-filename="Z:\Class Work\Thesis - KTH\Extra Work\Papers\ConferencePaper1\FPGAOnly.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><flowRegion
+         id="flowRegion7111"><rect
+           style="font-size:30px"
+           id="rect7113"
+           width="137.47972"
+           height="106.38036"
+           x="72.225906"
+           y="319.49649" /></flowRegion><flowPara
+         id="flowPara7115"
+         style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Garamond;-inkscape-font-specification:Garamond">Input Data</flowPara><flowPara
+         id="flowPara7117"
+         style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Garamond;-inkscape-font-specification:Garamond">Points</flowPara></flowRoot>    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend);stroke-miterlimit:4;stroke-dasharray:none"
+       d="m -22.704651,298.93894 c 74.194827,0 74.509184,0 74.509184,0"
+       id="path6923"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="Z:\Class Work\Thesis - KTH\Extra Work\Papers\ConferencePaper1\FPGAOnly.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot7109-9"
+       style="font-size:30px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(379.84096,77.404903)"><flowRegion
+         id="flowRegion7111-4"><rect
+           id="rect7113-6"
+           width="97.479721"
+           height="44.951782"
+           x="72.225906"
+           y="319.49649"
+           style="font-size:30px;text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara7117-3"
+         style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Garamond;-inkscape-font-specification:Garamond">Damping</flowPara><flowPara
+         style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Garamond;-inkscape-font-specification:Garamond"
+         id="flowPara7163">Signal</flowPara></flowRoot>    <g
+       id="g3920"
+       transform="translate(-703.06617,-76.771594)"
+       inkscape:export-filename="Z:\Class Work\Thesis - KTH\Extra Work\Papers\ConferencePaper1\FPGAOnly.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <rect
+         y="443.25989"
+         x="441.06256"
+         height="98.955605"
+         width="239.64932"
+         id="rect2985-1-7-2"
+         style="fill:none;stroke:#000000;stroke-width:2.57901001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <flowRoot
+         style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         id="flowRoot5448-4-4"
+         xml:space="preserve"
+         transform="translate(248.23439,115.31391)"><flowRegion
+           id="flowRegion5450-0-5"><rect
+             style="text-align:center;text-anchor:middle"
+             y="341.71988"
+             x="201.27289"
+             height="94.954323"
+             width="221.47594"
+             id="rect5452-9-8" /></flowRegion><flowPara
+           style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Garamond;-inkscape-font-specification:Garamond"
+           id="flowPara5454-4-8">FPGA Monitoring &amp; diagnostics</flowPara></flowRoot>    </g>
+    <g
+       id="g3062"
+       transform="translate(-656.6325,-67.428145)"
+       inkscape:export-filename="Z:\Class Work\Thesis - KTH\Extra Work\Papers\ConferencePaper1\FPGAOnly.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <g
+         id="g3070">
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="rect2985-1-7-2-2"
+           width="178.08885"
+           height="84.367226"
+           x="-131.99622"
+           y="324.18347" />
+        <flowRoot
+           transform="translate(-350.69394,-7.7461504)"
+           xml:space="preserve"
+           id="flowRoot5448-4-4-1"
+           style="font-size:30px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><flowRegion
+             id="flowRegion5450-0-5-4"><rect
+               id="rect5452-9-8-9"
+               width="217.93785"
+               height="83.78933"
+               x="201.27289"
+               y="341.71988"
+               style="font-size:30px" /></flowRegion><flowPara
+             style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Garamond;-inkscape-font-specification:Garamond"
+             id="flowPara7255">From</flowPara><flowPara
+             style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Garamond;-inkscape-font-specification:Garamond"
+             id="flowPara3314">RT Controller</flowPara></flowRoot>      </g>
+    </g>
+    <g
+       id="g4417"
+       transform="translate(179.38201,10.101525)"
+       inkscape:export-filename="Z:\Class Work\Thesis - KTH\Extra Work\Papers\ConferencePaper1\FPGAOnly.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <g
+         id="g4398">
+        <g
+           id="g3904"
+           transform="translate(-836.40631,-214.15234)">
+          <g
+             id="g5084"
+             transform="translate(0,-1.9097285)">
+            <rect
+               style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+               id="rect2985-1-7-2-4"
+               width="169.01257"
+               height="84.382324"
+               x="165.0014"
+               y="793.27216" />
+            <flowRoot
+               transform="translate(-26.934204,457.64403)"
+               xml:space="preserve"
+               id="flowRoot5448-4-4-5"
+               style="font-size:30px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><flowRegion
+                 id="flowRegion5450-0-5-2"><rect
+                   id="rect5452-9-8-99"
+                   width="149.75511"
+                   height="73.741119"
+                   x="201.27289"
+                   y="341.71988"
+                   style="font-size:30px;text-align:center;text-anchor:middle" /></flowRegion><flowPara
+                 id="flowPara5454-4-8-83"
+                 style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Garamond;-inkscape-font-specification:Garamond">Ramp</flowPara><flowPara
+                 style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Garamond;-inkscape-font-specification:Garamond"
+                 id="flowPara7545">Integrator</flowPara></flowRoot>          </g>
+        </g>
+        <g
+           id="g3912"
+           transform="translate(-836.40631,-212.24261)">
+          <rect
+             y="789.4527"
+             x="394.93039"
+             height="84.382324"
+             width="169.01257"
+             id="rect2985-1-7-2-6"
+             style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+          <flowRoot
+             style="font-size:30px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+             id="flowRoot5448-4-4-9"
+             xml:space="preserve"
+             transform="translate(203.0314,476.52232)"><flowRegion
+               id="flowRegion5450-0-5-8"><rect
+                 style="font-size:30px"
+                 y="341.71988"
+                 x="201.27289"
+                 height="56.568523"
+                 width="149.75511"
+                 id="rect5452-9-8-6" /></flowRegion><flowPara
+               style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Garamond;-inkscape-font-specification:Garamond"
+               id="flowPara5454-4-8-6">Phasor</flowPara><flowPara
+               id="flowPara7547"
+               style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Garamond;-inkscape-font-specification:Garamond">Estimator</flowPara></flowRoot>        </g>
+        <path
+           inkscape:connector-curvature="0"
+           id="path7735"
+           d="m -501.77981,619.40125 58.41578,0"
+           style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Lend)" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path7735-8"
+           d="m -272.17764,619.40125 58.41578,0"
+           style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Lend)" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path7735-7"
+           d="m -731.68563,619.40125 58.41578,0"
+           style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Lend)" />
+      </g>
+      <path
+         transform="translate(-836.40631,-214.15234)"
+         sodipodi:type="arc"
+         style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:5, 30;stroke-dashoffset:0"
+         id="path7964"
+         sodipodi:cx="360.62445"
+         sodipodi:cy="833.66418"
+         sodipodi:rx="299.00516"
+         sodipodi:ry="94.449265"
+         d="m 659.62961,833.66418 c 0,52.16289 -133.86917,94.44927 -299.00516,94.44927 -165.13599,0 -299.005157,-42.28638 -299.005157,-94.44927 0,-52.16288 133.869167,-94.44926 299.005157,-94.44926 165.13599,0 299.00516,42.28638 299.00516,94.44926 z"
+         inkscape:export-filename="D:\Eldrich\Data_Plots\Report - Controller Testing\Figures\path7966.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+    </g>
+    <path
+       inkscape:export-ydpi="150"
+       inkscape:export-xdpi="150"
+       inkscape:connector-curvature="0"
+       id="path7966"
+       d="m -416.40615,329.91001 c -36.71232,98.52582 22.78694,201.57116 22.78694,201.57116"
+       style="fill:none;stroke:#000000;stroke-width:2.12454414;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Lend-2)"
+       inkscape:export-filename="Z:\Class Work\Thesis - KTH\Extra Work\Papers\ConferencePaper1\FPGAOnly.png" />
+    <g
+       id="g3927-1"
+       transform="translate(-454.37823,-173.8968)"
+       inkscape:export-filename="Z:\Class Work\Thesis - KTH\Extra Work\Papers\ConferencePaper1\FPGAOnly.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <g
+         id="g3973"
+         transform="translate(23.233509,-5.0507627)">
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="rect2985-1-7"
+           width="174.02789"
+           height="92.428093"
+           x="236.04445"
+           y="431.67245" />
+        <flowRoot
+           xml:space="preserve"
+           id="flowRoot5448-4"
+           style="font-size:30px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+           transform="translate(76.445602,119.11018)"><flowRegion
+             id="flowRegion5450-0"><rect
+               style="font-size:30px;text-align:center;text-anchor:middle"
+               id="rect5452-9"
+               width="89.145966"
+               height="69.700508"
+               x="201.27289"
+               y="341.71988" /></flowRegion><flowPara
+             id="flowPara3281-8"
+             style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Garamond;-inkscape-font-specification:Garamond">Scaling</flowPara></flowRoot>      </g>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-mid:url(#Arrow1Lend);marker-end:url(#Arrow1Lend)"
+       d="m -238.85876,298.93894 40.06892,0"
+       id="path3862-5"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="Z:\Class Work\Thesis - KTH\Extra Work\Papers\ConferencePaper1\FPGAOnly.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#marker3992)"
+       d="m -569.58221,235.08992 553.283036,0 0,255.2588 -552.201346,0 0,-248.8237"
+       id="path4012"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="Z:\Class Work\Thesis - KTH\Extra Work\Papers\ConferencePaper1\FPGAOnly.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.01249433;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#marker3992)"
+       d="m -609.27947,436.64164 276.31471,0 0,-91.41607"
+       id="path4438"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="Z:\Class Work\Thesis - KTH\Extra Work\Papers\ConferencePaper1\FPGAOnly.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+  </g>
+</svg>

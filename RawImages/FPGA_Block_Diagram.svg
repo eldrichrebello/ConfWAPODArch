@@ -107,9 +107,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="-530.46384"
-     inkscape:cy="535.74481"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="-346.67564"
+     inkscape:cy="676.71892"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -242,35 +242,6 @@
            style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Garamond;-inkscape-font-specification:Garamond"
            id="flowPara3281">POD</flowPara></flowRoot>    </g>
     <g
-       id="g3092"
-       transform="translate(-1036.8962,122.48227)"
-       inkscape:export-filename="Z:\Class Work\Thesis - KTH\Extra Work\Papers\ConferencePaper1\FPGAOnly.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150">
-      <rect
-         y="273.07251"
-         x="247.7411"
-         height="82.189278"
-         width="179.09213"
-         id="rect5483"
-         style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <flowRoot
-         transform="translate(37.38385,17.80489)"
-         style="font-size:30px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans"
-         id="flowRoot5485"
-         xml:space="preserve"><flowRegion
-           id="flowRegion5487"><rect
-             style="font-size:30px;text-align:center;text-anchor:middle;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-             y="264.19064"
-             x="227.91566"
-             height="75.40802"
-             width="143.41257"
-             id="rect5489" /></flowRegion><flowPara
-           style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Garamond;-inkscape-font-specification:Garamond"
-           id="flowPara5491">Control</flowPara><flowPara
-           style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Garamond;-inkscape-font-specification:Garamond"
-           id="flowPara5493">Parameters </flowPara></flowRoot>    </g>
-    <g
        id="g3104"
        transform="translate(-741.15373,-162.05758)"
        inkscape:export-filename="Z:\Class Work\Thesis - KTH\Extra Work\Papers\ConferencePaper1\FPGAOnly.png"
@@ -375,38 +346,6 @@
              id="rect5452-9-8" /></flowRegion><flowPara
            style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Garamond;-inkscape-font-specification:Garamond"
            id="flowPara5454-4-8">FPGA Monitoring &amp; diagnostics</flowPara></flowRoot>    </g>
-    <g
-       id="g3062"
-       transform="translate(-656.6325,-67.428145)"
-       inkscape:export-filename="Z:\Class Work\Thesis - KTH\Extra Work\Papers\ConferencePaper1\FPGAOnly.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150">
-      <g
-         id="g3070">
-        <rect
-           style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-           id="rect2985-1-7-2-2"
-           width="178.08885"
-           height="84.367226"
-           x="-131.99622"
-           y="324.18347" />
-        <flowRoot
-           transform="translate(-350.69394,-7.7461504)"
-           xml:space="preserve"
-           id="flowRoot5448-4-4-1"
-           style="font-size:30px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><flowRegion
-             id="flowRegion5450-0-5-4"><rect
-               id="rect5452-9-8-9"
-               width="217.93785"
-               height="83.78933"
-               x="201.27289"
-               y="341.71988"
-               style="font-size:30px" /></flowRegion><flowPara
-             style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Garamond;-inkscape-font-specification:Garamond"
-             id="flowPara7255">From</flowPara><flowPara
-             style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Garamond;-inkscape-font-specification:Garamond"
-             id="flowPara3314">RT Controller</flowPara></flowRoot>      </g>
-    </g>
     <g
        id="g4417"
        transform="translate(179.38201,10.101525)"
@@ -549,7 +488,7 @@
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#marker3992)"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:2,2;marker-end:url(#marker3992);stroke-dashoffset:0"
        d="m -569.58221,235.08992 553.283036,0 0,255.2588 -552.201346,0 0,-248.8237"
        id="path4012"
        inkscape:connector-curvature="0"
@@ -564,5 +503,98 @@
        inkscape:export-filename="Z:\Class Work\Thesis - KTH\Extra Work\Papers\ConferencePaper1\FPGAOnly.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150" />
+    <g
+       id="g3191"
+       inkscape:export-filename="Z:\Class Work\Thesis - KTH\Extra Work\Papers\ConferencePaper1\FPGAOnly.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <g
+         inkscape:export-ydpi="150"
+         inkscape:export-xdpi="150"
+         inkscape:export-filename="Z:\Class Work\Thesis - KTH\Extra Work\Papers\ConferencePaper1\FPGAOnly.png"
+         transform="translate(-1037.2738,122.48227)"
+         id="g3092">
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="rect5483"
+           width="179.09213"
+           height="82.189278"
+           x="247.7411"
+           y="273.07251" />
+        <flowRoot
+           xml:space="preserve"
+           id="flowRoot5485"
+           style="font-size:30px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans"
+           transform="translate(37.38385,17.80489)"><flowRegion
+             id="flowRegion5487"><rect
+               id="rect5489"
+               width="143.41257"
+               height="75.40802"
+               x="227.91566"
+               y="264.19064"
+               style="font-size:30px;text-align:center;text-anchor:middle;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" /></flowRegion><flowPara
+             id="flowPara5491"
+             style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Garamond;-inkscape-font-specification:Garamond">Control</flowPara><flowPara
+             id="flowPara5493"
+             style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Garamond;-inkscape-font-specification:Garamond">Parameters </flowPara></flowRoot>      </g>
+      <g
+         transform="translate(-0.74832545,0)"
+         id="g3154">
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:2.68766236;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="rect2985-1-7-2-2"
+           width="179.9012"
+           height="150.82242"
+           x="-789.1889"
+           y="225.84746" />
+        <flowRoot
+           xml:space="preserve"
+           id="flowRoot6488-2-4"
+           style="font-size:30px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+           transform="translate(-1201.1963,-176.19051)"><flowRegion
+             id="flowRegion6490-6-0"><rect
+               id="rect6492-0-9"
+               width="227.90077"
+               height="143.74294"
+               x="387.85715"
+               y="407.89789"
+               style="font-size:30px" /></flowRegion><flowPara
+             style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Garamond;-inkscape-font-specification:Garamond"
+             id="flowPara3102-8">Data Extracted from</flowPara><flowPara
+             style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Garamond;-inkscape-font-specification:Garamond"
+             id="flowPara3131">Synchrophasor Stream</flowPara></flowRoot>      </g>
+      <g
+         transform="translate(-5.7955157e-5,0)"
+         id="g3182">
+        <flowRoot
+           transform="translate(-1010.5149,190.53999)"
+           xml:space="preserve"
+           id="flowRoot5448-4-4-1"
+           style="font-size:30px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><flowRegion
+             id="flowRegion5450-0-5-4"><rect
+               id="rect5452-9-8-9"
+               width="217.93785"
+               height="83.78933"
+               x="201.27289"
+               y="341.71988"
+               style="font-size:30px" /></flowRegion><flowPara
+             style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Garamond;-inkscape-font-specification:Garamond"
+             id="flowPara7255">From</flowPara><flowPara
+             style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Garamond;-inkscape-font-specification:Garamond"
+             id="flowPara3314">RT Controller</flowPara></flowRoot>        <text
+           xml:space="preserve"
+           style="font-size:205.30238342px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:GENISO;-inkscape-font-specification:GENISO"
+           x="-658.48358"
+           y="-504.74844"
+           id="text3162"
+           sodipodi:linespacing="125%"
+           transform="matrix(0,-0.8163895,1.2249055,0,0,0)"><tspan
+             sodipodi:role="line"
+             id="tspan3164"
+             x="-658.48358"
+             y="-504.74844"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:GENISO;-inkscape-font-specification:GENISO">{</tspan></text>
+      </g>
+    </g>
   </g>
 </svg>

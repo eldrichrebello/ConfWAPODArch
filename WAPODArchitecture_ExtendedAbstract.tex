@@ -276,7 +276,7 @@ Email: rebello@kth.se}
 \and
 \IEEEauthorblockN{Luigi Vanfretti}
 \IEEEauthorblockA{Kungliga Tekniska h\"{o}gskolan \\
-\& Statnett SF\\
+Stockholm, Sweden \& Statnett SF, Oslo, Norway\\
 Email: luigi.vanfretti@statnett.no}
 \and
 \IEEEauthorblockN{Md. Shoaib Almas}
@@ -317,7 +317,7 @@ Email: msalmas@kth.se}
 
 % make the title area
 \maketitle
-
+%\vspace{-2em}
 % As a general rule, do not put math, special symbols or citations
 % in the abstract
 \begin{abstract}
@@ -348,18 +348,18 @@ Low-frequency, electromechanically induced, inter-area oscillations are of conce
 %%\subsection{Motivation}
 %The growth of power system interconnections between previously unconnected areas has given rise to the phenomenon of inter-area oscillations. These are low frequency (0.1-2 Hz.) oscillations where the generators of one synchronous area oscillate against those of another area. Damping for these oscillations is generally poor and if they are allowed to grow, they can lead to disconnection of the ties or a collapse of the power system. A famous example of the latter was the August 1996 blackout of the WSCC system in the USA \cite{NAERC}. Although the purpose of system interconnection was to increase stability, the present situation of the power system incorporates renewable energy sources and power trading corridors, both of which impact system stability.
 
-\begin{figure*}[]
-\centering
-\includegraphics[width=4in]{DataFlow.png}
-\caption{Data flow with digital and analogue components indicated}
-\label{Data_path}
-\end{figure*}
-
 \subsection{Previous Experiences}
 Modern solutions to the problem of inter-area oscillations involve using Power System Stabilisers (PSS) with locally available signals. These are effective at damping intra-area modes with good observability but may not be as effective at damping inter-area modes \cite{WAPODNorway} \cite{localREMcomparison}. Although initial field tests in \cite{WAPODNorway} \& \cite{WAPODChina} show promising results, the wide-area control systems tested so far have been implemented by extending the installed control system of an existing device (e.g. an SVC, see \cite{WAPODNorway}) to receive synchrophasor data, process it and to then feed the control algorithm. To the knowledge of the authors, there has not been any reported attempt at designing a general purpose, wire-area control system, starting from specifications and considering different hardware and software constraints. Such an approach is attractive as it can easily be adapted to different controllable elements thereby reducing implementation costs and facilitating straightforward development.
 %\vspace{-0.7em}
 \subsection{Contributions}
 The goal of this paper is to document the software architecture development process and challenges faced in the real-time implementation of a wide-area control system. \"{A}ngquist and Gama's\cite{PhasorPOD} Phasor Power Oscillation (Phasor POD) algorithm was chosen based on the operational requirements and control system design constraints. The developed prototype is termed a Wide Area Power Oscillation Damper (WAPOD). For purposes of comparison, the real-time \textsc{Simulink} implementation of the Phasor POD algorithm by Almas and Vanfretti \cite{PhasorPODImplement} is used as a benchmark. The performance of the hardware prototype developed will be tested and compared to the performance of this implementation of the algorithm. The two-area four-machine model developed by Klein, Rogers and Kundur \cite{KundurTwoArea} is used as a test-case and is modified to fit the requirements of experimental testing. A Hardware-in-the-loop experiment is constructed around the e\textsc{MEGASIM} real-time simulator from OPAL-RT \cite{OPALemegasim} with the two-area model running in real-time, physical PMUs and a synchrophasor-based Phasor-POD algorithm running on a cRIO (Figure \ref{Data_path}).
+
+\begin{figure}[tbh]
+\centering
+\includegraphics[width=3.4in]{DataFlow.png}
+\caption{Data flow with digital and analogue components indicated. Sections in white add deterministic delay to the control loop.}
+\label{Data_path}
+\end{figure}
 
 %\begin{figure}[H]
 %\centering
@@ -400,20 +400,20 @@ The goal of this paper is to document the software architecture development proc
 %\subsubsection*{Software}
 %The test-case network model used here was a version of the Klein-Rogers-Kundur two-area system implemented in a \textsc{Simulink} demo available with SimPowerSystems\cite{SIMULINKOnline}. This was modified to include an average-valued SVC model, identical to that used in \cite{PhasorPODImplement}. The software on the cRIO was written using LabView's Real-Time modules. Software development was done on a workstation computer. Code was loaded on the various devices (cRIO contollers, RT Simulator) over a TCP network.
 
+%The approach broadly includes the four steps from \cite{WaterfallCoding} 
+%
+%\begin{enumerate}
+%\item Initial Investigation
+%\item Requirements Definition
+%\item Architecture Design
+%\item Coding and Implementation
+%\item Experimental Testing to validate requirements
+%\end{enumerate}
+
 
 \section{Architecture Development Process}\label{arch}
 
-The software development approach followed here is based on the Waterfall method detailed in \cite{WaterfallCoding}. The approach broadly includes the four steps from \cite{WaterfallCoding} 
-
-\begin{enumerate}
-\item Initial Investigation
-\item Requirements Definition
-\item Architecture Design
-\item Coding and Implementation
-\item Experimental Testing to validate requirements
-\end{enumerate}
-
-The linear waterfall method was modified to be iterative to account for various constraints and to also account for revisions in the initial definition caused by these constraints. This iterative process is illustrated in Figure \ref{Reference} and is realised for the specific application here, as illustrated in Figure \ref{Reference}. %Several reasons were behind the choice of an iterative design approach. Chief among them was the cRIO hardware itself. As an implementation on this hardware had not been attempted earlier, the limitations of the hardware were unknown. Based on the limitations faced during an implementation attempt, the design and features incorporated would be revised to fit within the limitations of the hardware. 
+The software development approach followed here is based on the Waterfall method detailed in \cite{WaterfallCoding}. The linear waterfall method was modified to be iterative to account for various constraints and to also account for revisions in the initial definition caused by these constraints. This iterative process is illustrated in Figure \ref{Reference}, sub-figure 1 and is realised for the specific application here, as illustrated in Figure \ref{Reference}, sub-figure~2. %Several reasons were behind the choice of an iterative design approach. Chief among them was the cRIO hardware itself. As an implementation on this hardware had not been attempted earlier, the limitations of the hardware were unknown. Based on the limitations faced during an implementation attempt, the design and features incorporated would be revised to fit within the limitations of the hardware. 
 %\begin{figure}[!t]
 %\centering
 %\includegraphics[width=3.5in]{Revision.png} 
@@ -430,10 +430,10 @@ The linear waterfall method was modified to be iterative to account for various 
 %While the exact role of the FPGA in this implementation was not known in advance, it brought with it some limitations. Chief among these was the limitation on data accuracy due to the fact that all calculations together with circuit logic would be implemented in hardware.
 %\vspace{-1em}
 \section{Architecture Implementation and Refinement}
-Figure \ref{Reference} shows the three-stage design process with design proposal, implementation and revision. To begin with, the controller specifications were used to draft a design proposal. An implementation attempt was made using this draft proposal. When the additional limits imposed by the software and hardware platforms were included, some goals of the original implementation needed to be revised. With these limitations, the original design was modified to generate a revised design. An attempt was then made to implement this revised design. As further limitations were encountered, the design was further modified. This iterative process was repeated till a working implementation was reached.
+Figure \ref{Reference}, sub-figure 1 shows the three-stage design process with design proposal, implementation and revision. To begin with, the controller specifications were used to draft a design proposal. An implementation attempt was made using this draft proposal. When the additional limits imposed by the software and hardware platforms were included, some goals of the original implementation needed to be revised. With these limitations, the original design was modified to generate a revised design. An attempt was then made to implement this revised design. As further limitations were encountered, the design was further modified. This iterative process was repeated till a working implementation was reached.
 
-\subsubsection{Initial Design}
-Initially, an autonomous, independent controller was envisaged. Such a controller would be able to receive IEEE C37.118 synchrophasor data directly over the communication network and extract measurement data (Figure \ref{Reference}). This design also incorporated two control functions, a wide area control function and a local control function. The wide area control function was the Phasor POD\cite{PhasorPOD}. The local control function would use locally available data in a manner similar to a Power System Stabiliser (PSS). Automatic switching between the two functions and automated input signal selection was also considered. If the signal to noise ratio in the wide area signal deteriorated or if the signal delay became prohibitively high, the controller would automatically switch to the local signal or another wide-area signal. The principal consideration in this design was the limited resources available on the FPGA and the complexity of the algorithms to be implemented. This required implementation of all algorithms and computation sections on the RT section of the cRIO with the FPGA being used for interpolation only. %In addition, the RT controller chosen has tremendous flexibility as algorithms are implemented using software, rather than hardware as on the FPGA. The RT controller also has more storage space available to implement algorithms. %This design would be able to compute observability indices for the different input signals and then automatically select the one with the highest observability of a particular mode
+\subsubsection{Initial Design Proposal}
+Initially, an autonomous, independent controller was envisaged. Such a controller would be able to receive IEEE C37.118 synchrophasor data directly over the communication network and extract measurement data (Figure \ref{Reference}, sub-figure 2). This design also incorporated two control functions, a wide area control function and a local control function. The wide area control function was the Phasor POD\cite{PhasorPOD}. The local control function would use locally available data in a manner similar to a Power System Stabiliser (PSS). Automatic switching between the two functions and automated input signal selection was also considered. If the signal to noise ratio in the wide area signal deteriorated or if the signal delay became prohibitively high, the controller would automatically switch to the local signal or another wide-area signal. The principal consideration in this design was the limited resources available on the FPGA and the complexity of the algorithms to be implemented. This required implementation of all algorithms and computation sections on the RT section of the cRIO with the FPGA being used for interpolation only. %In addition, the RT controller chosen has tremendous flexibility as algorithms are implemented using software, rather than hardware as on the FPGA. The RT controller also has more storage space available to implement algorithms. %This design would be able to compute observability indices for the different input signals and then automatically select the one with the highest observability of a particular mode
 
 %\begin{figure}[!b]
 %\centering
@@ -442,7 +442,7 @@ Initially, an autonomous, independent controller was envisaged. Such a controlle
 %\label{Revision1}
 %\end{figure}
 
-\subsubsection*{Challenges} This design was faced with a problem of differing loop rates. The real-time simulator runs at a 50$\mu$s time step. The fastest that the RT controller could run was 1ms. Data would thus be generated faster than the RT controller was able to process. The second problem was producing control output at the rate expected by the real-time simulator. The speed constraint of the RT controller meant that it would not be possible to use it to generate a control signal. To address this issue, this architecture envisaged using the FPGA to perform interpolation between successive data points. Data generated by the FPGA would be sent over the communication network back to the real-time simulator for use in the simulation. This design needed to be changed due to limitations of different components. 
+%\subsubsection*{Challenges} This design was faced with a problem of differing loop rates. The real-time simulator runs at a 50$\mu$s time step. The fastest that the RT controller could run was 1ms. Data would thus be generated faster than the RT controller was able to process. The second problem was producing control output at the rate expected by the real-time simulator. The speed constraint of the RT controller meant that it would not be possible to use it to generate a control signal. To address this issue, this architecture envisaged using the FPGA to perform interpolation between successive data points. Data generated by the FPGA would be sent over the communication network back to the real-time simulator for use in the simulation. This design needed to be changed due to limitations of different components. 
 %The RT controller on the cRIO is not capable of matching this speed.
 %\begin{figure}[H]
 %\centering
@@ -452,7 +452,7 @@ Initially, an autonomous, independent controller was envisaged. Such a controlle
 %\label{fig:InitialArch}
 %\end{figure}
 
-One, no software was available to receive a synchrophasor stream and extract measurement data directly on the RT controller. This process had to be performed on a desktop computer running a real-time data mediator (Statnett's Synchrophasor Software Development Toolkit, $S^{3}DK$ \cite{SDK}) and LabVIEW. Once measurement data from the synchrophasor stream was available, it could be streamed to the real-time controller over the TCP/IP network using LabView's Shared Network Variables. Two, data generated by the FPGA could not be sent to the real-time simulator directly over the communication network. Though theoretically possible, further work is required. Also, synchronising the process of generating the control signal and the use of the generated data on the real-time simulator is a complex task. Three, the process of data interpolation on the FPGA is computationally intensive. To achieve results better than with a simple linear interpolation, a history of past data points is required. This process is, in itself, complex and introduces further delay. It is, however, simpler than implementing the damping control algorithm on the FPGA. At this stage, FPGA limitations were the principal factor behind choosing to implement the Phasor-POD algorithm on the RT controller. Four, an algorithm for automated signal selection based on observability indices had not been developed. In principle, this too, is possible and can be implemented on the real-time controller in the future when such an algorithm is developed and verified. The Phasor POD algorithm input parameters also change depending on the input used. An approach to determine these parameters iteratively or calculate them from input data is required. %This only adds to the complexity.
+%One, no software was available to receive a synchrophasor stream and extract measurement data directly on the RT controller. This process had to be performed on a desktop computer running a real-time data mediator (Statnett's Synchrophasor Software Development Toolkit, $S^{3}DK$ \cite{SDK}) and LabVIEW. Once measurement data from the synchrophasor stream was available, it could be streamed to the real-time controller over the TCP/IP network using LabView's Shared Network Variables. Two, data generated by the FPGA could not be sent to the real-time simulator directly over the communication network. Though theoretically possible, further work is required. Also, synchronising the process of generating the control signal and the use of the generated data on the real-time simulator is a complex task. Three, the process of data interpolation on the FPGA is computationally intensive. To achieve results better than with a simple linear interpolation, a history of past data points is required. This process is, in itself, complex and introduces further delay. It is, however, simpler than implementing the damping control algorithm on the FPGA. At this stage, FPGA limitations were the principal factor behind choosing to implement the Phasor-POD algorithm on the RT controller. Four, an algorithm for automated signal selection based on observability indices had not been developed. In principle, this too, is possible and can be implemented on the real-time controller in the future when such an algorithm is developed and verified. The Phasor POD algorithm input parameters also change depending on the input used. An approach to determine these parameters iteratively or calculate them from input data is required. %This only adds to the complexity.
 
 \subsubsection{Development and Revision}
 %\begin{figure}[h]
@@ -463,7 +463,7 @@ One, no software was available to receive a synchrophasor stream and extract mea
 %\label{fig:Revision}
 %\end{figure}
 
-With the limitations of the initial architecture in mind, the architecture was refined. The process of  extracting data from the synchrophasor stream was shifted to a workstation computer along with the processes of signal selection and processing. Once data was available, it was sent to the RT controller, over the  network. The damping control was kept on the RT controller with the FPGA performing the interpolation required to match the read-interval of the real-time simulator. Besides the damping control algorithm, a local control function was included on the RT controller. This revision is shown in Figure \ref{Reference}. Here, the complexity of implementing an interpolation algorithm on the FPGA was examined in detail. An implementation was also attempted. It was determined that a simple linear interpolation algorithm would not be sufficiently accurate. An implementation of the damping control algorithm on the RT controller was also tested. The fastest loop rate that could be achieved was always in excess of 25ms. This was slower than the reporting rate of the PMUs. Communication between the cRIO and the RT simulator using TCP/IP was also abandoned. Analogue output signals of the FPGA were instead hard-wired to the real-time simulator's analogue inputs.
+With the limitations of the initial architecture in mind, the architecture was refined. The process of  extracting data from the synchrophasor stream was shifted to a workstation computer along with the processes of signal selection and processing. Once data was available, it was sent to the RT controller, over the  network. The damping control was kept on the RT controller with the FPGA performing the interpolation required to match the read-interval of the real-time simulator. Besides the damping control algorithm, a local control function was included on the RT controller. This revision is shown in Figure \ref{Reference}, sub-figure 3. Here, the complexity of implementing an interpolation algorithm on the FPGA was examined in detail. An implementation was also attempted. It was determined that a simple linear interpolation algorithm would not be sufficiently accurate. An implementation of the damping control algorithm on the RT controller was also tested. The fastest loop rate that could be achieved was always in excess of 25ms. This was slower than the reporting rate of the PMUs. Communication between the cRIO and the RT simulator using TCP/IP was also abandoned. Analogue output signals of the FPGA were instead hard-wired to the real-time simulator's analogue inputs.
 \subsubsection{Final Implementation}
 %\begin{figure}[htb]
 %\centering
@@ -487,6 +487,13 @@ At this stage, the damping control algorithm was moved to the FPGA with the RT c
 %\caption{FPGA Software block diagram}
 %\label{FPGA_Blocks}
 %\end{figure}
+
+\begin{figure*}[!b]
+\centering
+\includegraphics[width=6in]{Abstract_Image}
+\caption{1. Three-stage architecture refinement process. 2. Initial architecture realised 3. First architecture refinement 4. Final architecture as implemented}
+\label{Reference}
+\end{figure*}
 \section{Hardware-in-the-Loop Test} \label{HILtest}
 %\begin{figure}[H]
 %\centering
@@ -495,19 +502,19 @@ At this stage, the damping control algorithm was moved to the FPGA with the RT c
 %\vspace{-0.5em}
 %\label{Two_area}
 %\end{figure}
-A setup identical to that outlined in Figure \ref{Data_path} was constructed and used to verify the working of the hardware WAPOD. The signal generated from the real-time Phasor POD implementation is reinserted in the model at the control system of the SVC in the two-area network.
-\begin{figure}[htb]
+A setup identical to that outlined in Figure \ref{Data_path} was constructed and used to verify the working of the hardware WAPOD. %The signal generated from the real-time Phasor POD implementation is reinserted in the model at the control system of the SVC in the two-area network.
+\begin{figure}[H]
 \centering
-\includegraphics[width=2.5in]{Results.png} 
+\includegraphics[width=3.5in]{Results.png} 
 \vspace{-0.5em}
 \caption{Performance of Hardware controller with small disturbance. Note that the decreasing magnitude of the damping signal indicates that the oscillation magnitude is decreasing in correspondence.}
 %\vspace{-0.5em}
 \label{Results}
 \end{figure}
-The hardware implementation of the POD algorithm was verified to be able to keep the system stable in steady state. It was also tested with small perturbations applied at one generator to excite the inter-area mode and was verified to work satisfactorily. Figure \ref{Results} shows the performance of the controller with two different inputs,active power and voltage angle difference. It is immediately evident that using the voltage angle difference provides better performance. The damping signal generated by the hardware controller was captured on an oscilloscope and is presented in Figure \ref{ScopeCapture}.
+The hardware implementation of the POD algorithm was verified to be able to keep the system stable in steady state. It was also tested with small perturbations applied at one generator to excite the inter-area mode and was verified to work satisfactorily. Figure \ref{Results} shows the performance of the controller with two different inputs,active power and voltage angle difference. It is immediately evident that using the voltage angle difference provides better performance. %The damping signal generated by the hardware controller was captured on an oscilloscope and is presented in Figure \ref{ScopeCapture}.
 %\vspace{-1em}
-\section{Conclusion} \label{conclusion}
-A hardware prototype of a real-time power oscillation damping control system was developed and tested. The developed prototype uses a real-time implementation of a wide-area control system. Issues and challenges faced in this implementation are documented and examined. The architecture development \& refinement process for this implementation is also examined in detail. The success of the tests performed indicates that PMU-based wide area controllers can be exploited for multiple control applications in power system control and monitoring.
+%\section{Conclusion} \label{conclusion}
+%A hardware prototype of a real-time power oscillation damping control system was developed and tested. The developed prototype uses a real-time implementation of a wide-area control system. Issues and challenges faced in this implementation are documented and examined. The architecture development \& refinement process for this implementation is also examined in detail. The success of the tests performed indicates that PMU-based wide area controllers can be exploited for multiple control applications in power system control and monitoring.
 
 % conference papers do not normally have an appendix
 
@@ -525,13 +532,13 @@ A hardware prototype of a real-time power oscillation damping control system was
 %\IEEEtriggercmd{\enlargethispage{-5in}}
 %\section*{Acknowledgment}
 %\vspace{-1em}
-\begin{figure}[htb]
-\centering
-\includegraphics[width=2.5in]{Best_sample.png}
-\vspace{-0.5em}
-\caption{Controller Response with Voltage Angle Difference input captured using an Oscilloscope}
-\label{ScopeCapture}
-\end{figure}
+%\begin{figure}[htb]
+%\centering
+%\includegraphics[width=2.5in]{Best_sample.png}
+%\vspace{-0.5em}
+%\caption{Controller Response with Voltage Angle Difference input captured using an Oscilloscope}
+%\label{ScopeCapture}
+%\end{figure}
 % references section
 
 % can use a bibliography generated by BibTeX as a .bbl file
@@ -547,12 +554,7 @@ A hardware prototype of a real-time power oscillation damping control system was
 % set second argument of \begin to the number of references
 % (used to reserve space for the reference number labels box)
 
-\begin{figure*}[b]
-\centering
-\includegraphics[width=6.5in]{Abstract_Image}
-\caption{1. Three-stage architecture refinement process. 2. Initial architecture realised 3. First architecture refinement 4. Final architecture as implemented}
-\label{Reference}
-\end{figure*}
+
 \begin{thebibliography}{1}
 
 \bibitem{NAERC} North American Electric Reliability Council \emph{Review of selected 1996 Electric System Disturbances in North America,} August 2002. Available Online: \url{http://www.nerc.com/pa/rrm/ea/System\%20Disturbance\%20Reports20DL/1996SystemDisturbance.pdf}

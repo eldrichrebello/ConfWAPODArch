@@ -1,0 +1,1022 @@
+
+%% bare_conf.tex
+%% V1.3
+%% 2007/01/11
+%% by Michael Shell
+%% See:
+%% http://www.michaelshell.org/
+%% for current contact information.
+%%
+%% This is a skeleton file demonstrating the use of IEEEtran.cls
+%% (requires IEEEtran.cls version 1.7 or later) with an IEEE conference paper.
+%%
+%% Support sites:
+%% http://www.michaelshell.org/tex/ieeetran/
+%% http://www.ctan.org/tex-archive/macros/latex/contrib/IEEEtran/
+%% and
+%% http://www.ieee.org/
+
+%%*************************************************************************
+%% Legal Notice:
+%% This code is offered as-is without any warranty either expressed or
+%% implied; without even the implied warranty of MERCHANTABILITY or
+%% FITNESS FOR A PARTICULAR PURPOSE! 
+%% User assumes all risk.
+%% In no event shall IEEE or any contributor to this code be liable for
+%% any damages or losses, including, but not limited to, incidental,
+%% consequential, or any other damages, resulting from the use or misuse
+%% of any information contained here.
+%%
+%% All comments are the opinions of their respective authors and are not
+%% necessarily endorsed by the IEEE.
+%%
+%% This work is distributed under the LaTeX Project Public License (LPPL)
+%% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,
+%% distributed and modified. A copy of the LPPL, version 1.3, is included
+%% in the base LaTeX documentation of all distributions of LaTeX released
+%% 2003/12/01 or later.
+%% Retain all contribution notices and credits.
+%% ** Modified files should be clearly indicated as such, including  **
+%% ** renaming them and changing author support contact information. **
+%%
+%% File list of work: IEEEtran.cls, IEEEtran_HOWTO.pdf, bare_adv.tex,
+%%                    bare_conf.tex, bare_jrnl.tex, bare_jrnl_compsoc.tex
+%%*************************************************************************
+
+% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
+% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
+% *** with production work. IEEE's font choices can trigger bugs that do  ***
+% *** not appear when using other class files.                            ***
+% The testflow support page is at:
+% http://www.michaelshell.org/tex/testflow/
+
+
+
+% Note that the a4paper option is mainly intended so that authors in
+% countries using A4 can easily print to A4 and see how their papers will
+% look in print - the typesetting of the document will not typically be
+% affected with changes in paper size (but the bottom and side margins will).
+% Use the testflow package mentioned above to verify correct handling of
+% both paper sizes by the user's LaTeX system.
+%
+% Also note that the "draftcls" or "draftclsnofoot", not "draft", option
+% should be used if it is desired that the figures are to be displayed in
+% draft mode.
+%
+\documentclass[conference]{IEEEtran}
+% Add the compsoc option for Computer Society conferences.
+%
+% If IEEEtran.cls has not been installed into the LaTeX system files,
+% manually specify the path to it like:
+% \documentclass[conference]{../sty/IEEEtran}
+
+%\usepackage{cite}
+%\usepackage[cmex10]{amsmath}
+%\usepackage{array}
+%\usepackage{framed}
+%\ifCLASSOPTIONcompsoc
+%  \usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+%\else
+%  \usepackage[caption=false,font=footnotesize]{subfig}
+%\fi
+%\usepackage{fixltx2e}
+%\usepackage{authblk}
+%\ifx\pdftexversion\undefined
+%\usepackage[dvips]{graphicx}
+%\else
+%\usepackage{graphicx}
+%\usepackage{epstopdf}
+% \usepackage{lettrine}
+%\usepackage{url}
+%\usepackage{color}
+\usepackage{authblk}
+\usepackage{textcomp}
+
+% Some very useful LaTeX packages include:
+% (uncomment the ones you want to load)
+
+
+% *** MISC UTILITY PACKAGES ***
+%
+%\usepackage{ifpdf}
+% Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
+% compilation based on whether the output is pdf or dvi.
+% usage:
+% \ifpdf
+%   % pdf code
+% \else
+%   % dvi code
+% \fi
+% The latest version of ifpdf.sty can be obtained from:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/oberdiek/
+% Also, note that IEEEtran.cls V1.7 and later provides a builtin
+% \ifCLASSINFOpdf conditional that works the same way.
+% When switching from latex to pdflatex and vice-versa, the compiler may
+% have to be run twice to clear warning/error messages.
+
+
+
+
+
+
+% *** CITATION PACKAGES ***
+%
+\usepackage{cite}
+% cite.sty was written by Donald Arseneau
+% V1.6 and later of IEEEtran pre-defines the format of the cite.sty package
+% \cite{} output to follow that of IEEE. Loading the cite package will
+% result in citation numbers being automatically sorted and properly
+% "compressed/ranged". e.g., [1], [9], [2], [7], [5], [6] without using
+% cite.sty will become [1], [2], [5]--[7], [9] using cite.sty. cite.sty's
+% \cite will automatically add leading space, if needed. Use cite.sty's
+% noadjust option (cite.sty V3.8 and later) if you want to turn this off.
+% cite.sty is already installed on most LaTeX systems. Be sure and use
+% version 4.0 (2003-05-27) and later if using hyperref.sty. cite.sty does
+% not currently provide for hyperlinked citations.
+% The latest version can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/cite/
+% The documentation is contained in the cite.sty file itself.
+
+
+
+
+
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\ifCLASSINFOpdf
+ \usepackage[pdftex]{graphicx}
+ \graphicspath{{./figs/}}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../pdf/}{../jpeg/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+   \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\else
+  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
+  % will default to the driver specified in the system graphics.cfg if no
+  % driver is specified.
+  % \usepackage[dvips]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../eps/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.eps}
+\fi
+% graphicx was written by David Carlisle and Sebastian Rahtz. It is
+% required if you want graphics, photos, etc. graphicx.sty is already
+% installed on most LaTeX systems. The latest version and documentation can
+% be obtained at: 
+% http://www.ctan.org/tex-archive/macros/latex/required/graphics/
+% Another good source of documentation is "Using Imported Graphics in
+% LaTeX2e" by Keith Reckdahl which can be found as epslatex.ps or
+% epslatex.pdf at: http://www.ctan.org/tex-archive/info/
+%
+% latex, and pdflatex in dvi mode, support graphics in encapsulated
+% postscript (.eps) format. pdflatex in pdf mode supports graphics
+% in .pdf, .jpeg, .png and .mps (metapost) formats. Users should ensure
+% that all non-photo figures use a vector format (.eps, .pdf, .mps) and
+% not a bitmapped formats (.jpeg, .png). IEEE frowns on bitmapped formats
+% which can result in "jaggedy"/blurry rendering of lines and letters as
+% well as large increases in file sizes.
+%
+% You can find documentation about the pdfTeX application at:
+% http://www.tug.org/applications/pdftex
+
+
+
+
+
+% *** MATH PACKAGES ***
+%
+\usepackage[cmex10]{amsmath}
+% A popular package from the American Mathematical Society that provides
+% many useful and powerful commands for dealing with mathematics. If using
+% it, be sure to load this package with the cmex10 option to ensure that
+% only type 1 fonts will utilized at all point sizes. Without this option,
+% it is possible that some math symbols, particularly those within
+% footnotes, will be rendered in bitmap form which will result in a
+% document that can not be IEEE Xplore compliant!
+%
+% Also, note that the amsmath package sets \interdisplaylinepenalty to 10000
+% thus preventing page breaks from occurring within multiline equations. Use:
+%\interdisplaylinepenalty=2500
+% after loading amsmath to restore such page breaks as IEEEtran.cls normally
+% does. amsmath.sty is already installed on most LaTeX systems. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/required/amslatex/math/
+
+
+
+
+
+% *** SPECIALIZED LIST PACKAGES ***
+%
+%\usepackage{algorithmic}
+% algorithmic.sty was written by Peter Williams and Rogerio Brito.
+% This package provides an algorithmic environment fo describing algorithms.
+% You can use the algorithmic environment in-text or within a figure
+% environment to provide for a floating algorithm. Do NOT use the algorithm
+% floating environment provided by algorithm.sty (by the same authors) or
+% algorithm2e.sty (by Christophe Fiorio) as IEEE does not use dedicated
+% algorithm float types and packages that provide these will not provide
+% correct IEEE style captions. The latest version and documentation of
+% algorithmic.sty can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/algorithms/
+% There is also a support site at:
+% http://algorithms.berlios.de/index.html
+% Also of interest may be the (relatively newer and more customizable)
+% algorithmicx.sty package by Szasz Janos:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/algorithmicx/
+
+
+
+
+% *** ALIGNMENT PACKAGES ***
+%
+\usepackage{array}
+% Frank Mittelbach's and David Carlisle's array.sty patches and improves
+% the standard LaTeX2e array and tabular environments to provide better
+% appearance and additional user controls. As the default LaTeX2e table
+% generation code is lacking to the point of almost being broken with
+% respect to the quality of the end results, all users are strongly
+% advised to use an enhanced (at the very least that provided by array.sty)
+% set of table tools. array.sty is already installed on most systems. The
+% latest version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/required/tools/
+
+
+%\usepackage{mdwmath}
+%\usepackage{mdwtab}
+% Also highly recommended is Mark Wooding's extremely powerful MDW tools,
+% especially mdwmath.sty and mdwtab.sty which are used to format equations
+% and tables, respectively. The MDWtools set is already installed on most
+% LaTeX systems. The lastest version and documentation is available at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/mdwtools/
+
+
+% IEEEtran contains the IEEEeqnarray family of commands that can be used to
+% generate multiline equations as well as matrices, tables, etc., of high
+% quality.
+
+
+%\usepackage{eqparbox}
+% Also of notable interest is Scott Pakin's eqparbox package for creating
+% (automatically sized) equal width boxes - aka "natural width parboxes".
+% Available at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/eqparbox/
+
+
+
+
+
+% *** SUBFIGURE PACKAGES ***
+%\usepackage[tight,footnotesize]{subfigure}
+% subfigure.sty was written by Steven Douglas Cochran. This package makes it
+% easy to put subfigures in your figures. e.g., "Figure 1a and 1b". For IEEE
+% work, it is a good idea to load it with the tight package option to reduce
+% the amount of white space around the subfigures. subfigure.sty is already
+% installed on most LaTeX systems. The latest version and documentation can
+% be obtained at:
+% http://www.ctan.org/tex-archive/obsolete/macros/latex/contrib/subfigure/
+% subfigure.sty has been superceeded by subfig.sty.
+
+
+
+%\usepackage[caption=false]{caption}
+%\usepackage[font=footnotesize]{subfig}
+% subfig.sty, also written by Steven Douglas Cochran, is the modern
+% replacement for subfigure.sty. However, subfig.sty requires and
+% automatically loads Axel Sommerfeldt's caption.sty which will override
+% IEEEtran.cls handling of captions and this will result in nonIEEE style
+% figure/table captions. To prevent this problem, be sure and preload
+% caption.sty with its "caption=false" package option. This is will preserve
+% IEEEtran.cls handing of captions. Version 1.3 (2005/06/28) and later 
+% (recommended due to many improvements over 1.2) of subfig.sty supports
+% the caption=false option directly:
+%\usepackage[caption=false,font=footnotesize]{subfig}
+%
+% The latest version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/subfig/
+% The latest version and documentation of caption.sty can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/caption/
+
+
+
+
+% *** FLOAT PACKAGES ***
+%
+%\usepackage{fixltx2e}
+% fixltx2e, the successor to the earlier fix2col.sty, was written by
+% Frank Mittelbach and David Carlisle. This package corrects a few problems
+% in the LaTeX2e kernel, the most notable of which is that in current
+% LaTeX2e releases, the ordering of single and double column floats is not
+% guaranteed to be preserved. Thus, an unpatched LaTeX2e can allow a
+% single column figure to be placed prior to an earlier double column
+% figure. The latest version and documentation can be found at:
+% http://www.ctan.org/tex-archive/macros/latex/base/
+
+
+
+%\usepackage{stfloats}
+% stfloats.sty was written by Sigitas Tolusis. This package gives LaTeX2e
+% the ability to do double column floats at the bottom of the page as well
+% as the top. (e.g., "\begin{figure*}[!b]" is not normally possible in
+% LaTeX2e). It also provides a command:
+%\fnbelowfloat
+% to enable the placement of footnotes below bottom floats (the standard
+% LaTeX2e kernel puts them above bottom floats). This is an invasive package
+% which rewrites many portions of the LaTeX2e float routines. It may not work
+% with other packages that modify the LaTeX2e float routines. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/sttools/
+% Documentation is contained in the stfloats.sty comments as well as in the
+% presfull.pdf file. Do not use the stfloats baselinefloat ability as IEEE
+% does not allow \baselineskip to stretch. Authors submitting work to the
+% IEEE should note that IEEE rarely uses double column equations and
+% that authors should try to avoid such use. Do not be tempted to use the
+% cuted.sty or midfloat.sty packages (also by Sigitas Tolusis) as IEEE does
+% not format its papers in such ways.
+
+
+
+
+
+% *** PDF, URL AND HYPERLINK PACKAGES ***
+%
+%\usepackage{url}
+% url.sty was written by Donald Arseneau. It provides better support for
+% handling and breaking URLs. url.sty is already installed on most LaTeX
+% systems. The latest version can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/misc/
+% Read the url.sty source comments for usage information. Basically,
+% \url{my_url_here}.
+
+
+
+
+
+% *** Do not adjust lengths that control margins, column widths, etc. ***
+% *** Do not use packages that alter fonts (such as pslatex).         ***
+% There should be no need to do such things with IEEEtran.cls V1.6 and later.
+% (Unless specifically asked to do so by the journal or conference you plan
+% to submit to, of course. )
+
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+%
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+\title{Generic VSC-Based DC Grid EMT Modeling, Simulation, and Validation on a Scaled Hardware Platform\\\vspace{-1cm}}
+%% author names and affiliations
+%% use a multiple column layout for up to three different
+%% affiliations
+%\author{\IEEEauthorblockN{Luigi Vanfretti$^{12}$}
+%\IEEEauthorblockA{%School of Electrical Engineering\\
+%%KTH Royal Institute of Technology\\
+%%Stockholm, Sweden\\
+%luigiv@kth.se}
+%\IEEEauthorblockA{%Statnett SF R\&D\\
+%%Oslo, Norway\\
+%luigi.vanfretti@statnett.no}
+%\and
+%\IEEEauthorblockN{Wei Li$^1$}
+%\IEEEauthorblockA{%School of Electrical Engineering\\
+%%KTH Royal Institute of Technology\\
+%%Stockholm, Sweden\\
+%wei3@kth.se}
+%\and
+%\IEEEauthorblockN{Agust\'{i} Egea-\`{A}lvarez$^3$}
+%%\IEEEauthorblockA{Centre d\’Innovaci\'{o} Tecnol\`{o}gica en Convertidors Est\`{a}tics i Accionament\\
+%\IEEEauthorblockA{%CITCEA\\
+%%UPC Universitat Polit\`{e}cnica de Catalunya \\
+%%Barcelona, Spain\\
+%agusti.egea@citcea.upc.edu}
+%\and
+%\IEEEauthorblockN{Oriol Gomis-Bellmunt$^{34}$}
+%\IEEEauthorblockA{%CITCEA\\
+%%UPC Universitat Polit\`{e}cnica de Catalunya \\
+%%Barcelona, Spain\\
+%gomis@citcea.upc.edu}\\
+%%\IEEEauthorblockA{IREC Catalonia Institute for Energy Research\\
+%%Barcelona, Spain}
+%
+%
+%1 School of Electrical Engineering, KTH Royal Institute of Technology, Stockholm, Sweden\\
+%2 Statnett SF R\&D, Oslo, Norway\\
+%3 CITCEA, UPC Universitat Polit\`{e}cnica de Catalunya, Barcelona, Spain\\
+%4 IREC Catalonia Institute for Energy Research, Barcelona, Spain}
+
+\author[1,2]{Luigi Vanfretti}
+\author[1]{Wei Li}
+\author[3]{Agust\'{i} Egea-Alvarez}
+\author[3,4]{Oriol Gomis-Bellmunt}
+\affil[1]{School of Electrical Engineering, KTH Royal Institute of Technology, Stockholm, Sweden}
+\affil[2]{Statnett SF, R\&D, Oslo, Norway}
+\affil[3]{CITCEA, UPC Universitat Polit\`{e}cnica de Catalunya, Barcelona, Spain}
+\affil[4]{IREC Catalonia Institute for Energy Research, Barcelona, Spain}
+
+
+% conference papers do not typically use \thanks and this command
+% is locked out in conference mode. If really needed, such as for
+% the acknowledgment of grants, issue a \IEEEoverridecommandlockouts
+% after \documentclass
+
+% for over three affiliations, or if they all won't fit within the width
+% of the page, use this alternative format:
+% 
+%\author{\IEEEauthorblockN{Michael Shell\IEEEauthorrefmark{1},
+%Homer Simpson\IEEEauthorrefmark{2},
+%James Kirk\IEEEauthorrefmark{3}, 
+%Montgomery Scott\IEEEauthorrefmark{3} and
+%Eldon Tyrell\IEEEauthorrefmark{4}}
+%\IEEEauthorblockA{\IEEEauthorrefmark{1}School of Electrical and Computer Engineering\\
+%Georgia Institute of Technology,
+%Atlanta, Georgia 30332--0250\\ Email: see http://www.michaelshell.org/contact.html}
+%\IEEEauthorblockA{\IEEEauthorrefmark{2}Twentieth Century Fox, Springfield, USA\\
+%Email: homer@thesimpsons.com}
+%\IEEEauthorblockA{\IEEEauthorrefmark{3}Starfleet Academy, San Francisco, California 96678-2391\\
+%Telephone: (800) 555--1212, Fax: (888) 555--1212}
+%\IEEEauthorblockA{\IEEEauthorrefmark{4}Tyrell Inc., 123 Replicant Street, Los Angeles, California 90210--4321}}
+
+
+
+
+% use for special paper notices
+%\IEEEspecialpapernotice{(Invited Paper)}
+
+
+
+
+% make the title area
+\maketitle
+
+
+\begin{abstract}
+%\boldmath
+This paper presents results from the KIC InnoEnergy project: Generic DC grid off-line and real-time simulation models and tools (Action 2.1, Subtask 2.1.1). The work reported here is focused on the development of a generic voltage source converter (VSC) model and its control schemes. Different test systems were designed and implemented in simulation tools and an experimental platform to verify the proposed generic model. Consistent simulation and emulation performances indicate that the generic model and its control schemes are applicable for VSC-HVDC operation, and thus, they can facilitate further research and development in DC grids. 
+\end{abstract}
+% IEEEtran.cls defaults to using nonbold math in the Abstract.
+% This preserves the distinction between vectors and scalars. However,
+% if the conference you are submitting to favors bold math in the abstract,
+% then you can use LaTeX's standard command \boldmath at the very start
+% of the abstract to achieve this. Many IEEE journals/conferences frown on
+% math in the abstract anyway.
+
+% no keywords
+
+
+
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+\IEEEpeerreviewmaketitle
+
+
+
+\section{Introduction}
+In the last 20 years, the importance of high voltage direct current (HVDC) long distance interconnections and back-to-back couplings has significantly increased all over the world. Even though the application of point-to-point HVDC links is well known, there are plentiful open questions for the operation of HVDC links within a meshed grid. Unfortunately, detailed DC grid models using realistic data are not available for research due to commercial and trade secret reasons. To overcome this drawback, the work presented in this paper developed generic voltage source converter (VSC) model, its control schemes, and DC grid test systems. To assess the validity and applicability of these models, a sale-down hardware-based platform was used for validation of the models' response. 
+%In addition, tests on a scaled test platform are performed for comparison and validation purpose. 
+%This will give the developed simulation models and tools a high value, as the process of comparison against industrial models and scaled down tools bring validation to the software tools.
+
+Within the KIC InnoEnergy project: Generic DC grid off-line and real-time simulation models and tools (Action 2.1 Subtask 2.1.1), KTH SmarTS Lab and UPC collaborated together for the model development and its validation .
+% of the component models and the validation of DC grids generic control models; in addition, test systems using these models were also elaborated. 
+First, DC grid generic control models suitable for off-line and real-time simulations for electromagnetic transient (EMT) analysis were developed. This included a standard generic low-level control model and a new generic high-level control model. In order to examine the generic control models' performance, different test systems were developed, such as one terminal VSC station, point-to-point VSC-HVDC link, four-terminal VSC DC grid. Moreover, off-line and real-time simulations of these test systems were performed in KTH SmarTS Lab. 
+%Sequentially, to enable the validation of DC grids generic control models, we performed the comparison and validation work against proprietary ABB internal model. 
+Ultimately, validation tests were carried out in UPC by using a scale-down platform.
+
+The remainder of this paper is organized as follows. Section II presents the generic VSC components and control models. Sequentially, different test systems are shown in Section III. Simulation tools and the validation platform are presented in Section IV. Section V presents simulation results and analyses, which are followed by the conclusion and discussion in Section VI.  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Generic VSC-HVDC models and its control schemes}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Generic VSC model\label{sec:VSCmodel}}
+Figure \ref{vsc} shows the main circuit diagram of a VSC converter. Point \emph{P} is the point of common coupling (PCC), whose left side connects with an AC system through an AC transformer and right side with a VSC \cite{Zhang}.
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.35\textwidth]{vsc}
+\caption{The main circuit diagram of a VSC converter}
+\label{vsc}
+\end{figure}
+
+The VSC model proposed in this work uses a three-phase two-level topology, which is the simplest and mostly used topology in VSC-HVDC technology. %As shown in Fig. \ref{3phase2level}, 
+Each phase leg consists of two switches which are switched on or off to control the output voltage. Each switch comprises insulated-gate bipolar transistors (IGBTs) and anti-parallel diodes. This configuration suits bidirectional power flow. The midpoint of each phase leg connects to the output of three-phase AC lines. 
+%\begin{figure}[!ht]
+%\centering
+%\includegraphics[width=0.35\textwidth]{3phase2level}
+%\caption{Three-phase two-level voltage source converter}
+%\label{3phase2level}
+%\end{figure}
+
+The switching signal generation for IGBTs can be controlled by various schemes. In this project, the sinusoidal pulse width modulation (SPWM) method was used. In SPWM the reference waveform is compared with the carrier waveform to generate the switching signals for IGBTs \cite{Naveed}. If the reference waveform is greater than the carrier waveform, the upper IGBT of a phase leg will be turned on, i.e. $S_{(a-up)}=1$. Otherwise, if the reference waveform is smaller than the carrier waveform, the lower IGBT of the same phase leg will be turned on, i.e. $S_{(a-low)}=1$. 
+%The switching signals for one phase leg, together with the comparison procedure for upper and lower switches, are shown in Fig. \ref{switching}. 
+%\begin{figure}[!ht]
+%\centering
+%\includegraphics[width=0.45\textwidth]{switching}
+%\caption{Switching signal generation for one phase leg}
+%\label{switching}
+%\end{figure}
+
+As shown in Fig.~\ref{vsc}, an AC filter is adjacent to the PCC. This capacitor can suppress harmonics generated by SPWM technique, thus avoiding the harmonics emitting into the AC system. Moreover, it can act as a reactive power source \cite{Naveed}\cite{Rokib}. The selection of the reactor value depends on the switching frequency. It is generally chosen between 0.15$\sim$0.2 $p.u$ of the base impedance \cite{Shire}. In this case, 0.15 $p.u.$ is selected. 
+
+The other component connecting to the PCC is a phase reactor. It operates as a low-pass filter to suppress the high-order harmonics generated by IGBT switchings and assists to control active and reactive power by regulating the current flowing through it \cite{Naveed}\cite{Rokib}. In addition, it limits the short-circuit currents. 
+
+On the DC side, two capacitors are installed to suppress the harmonics in DC current generated by ripples in DC voltage due to the SPWM technique. The magnitude of voltage ripples depends on the DC capacitor size and switching frequency. In addition, the design of DC capacitors has to consider both steady state and transient dynamics, (see \cite{Naveed}). 
+
+%VSC can be modeled both in detail and average value model (AVM). In detail model the IGBT’s are used as switching components. Using PWM technique, the gate pulses are given to the IGBT’s to generate the desired wave form. Detail modeling is significant to analyze lower level control of VSC which includes PWM and sub modules arm voltage control. However, in AVM a controllable AC voltage source is connected to the AC circuit and a controllable current source is connected to the DC circuit [14]. AC-side and DC-side representation of VSC-AVM can be shown by the following figures. Following AVM of VSC has been implemented in the Simulink model which was used in this thesis,
+%
+%VSC-AVM works on the basis of conservation of power. Total power consumed by the three controllable voltage sources i.e. $V_a$, $V_b$, $V_c$ equals to the injected power by the controllable current source $I_{DC}$ in to the DC link.
+%Modulation indexes ($m_a$,$m_b$,$m_c$) are responsible to control three phase voltage sources, the relations between AC and DC side can be written as [14]:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Generic VSC control model\label{sec:VSCcontrol}}
+Generally, VSCs contain a two-level control scheme. The low-level control scheme, e.g. SPWM, regulates the switching signal generation and provides switching pulses for IGBT valves, as mentioned in Subsection \ref{sec:VSCmodel}, by using the voltage references for each phase provided by high-level control scheme. The high-level control scheme, on the other hand, attempts to maintain the system DC voltage, active power, AC voltage and reactive power. 
+%by providing three-phase voltage references for low-level control scheme.
+
+As mentioned in Subsection \ref{sec:VSCmodel}, SPWM was chosen for the low-level control scheme. With respect to the high-level control scheme, vector-current control was used as it has been applied on many actual VSC-HVdc link installations. Furthermore, there are many design approaches for the vector-current control, which is illustrated in Fig.~\ref{vectorcurrent}. 
+\begin{figure}
+\centering
+\includegraphics[width=0.45\textwidth]{vectorcurrent}
+\caption{Main circuit including the control block diagram for vector-current control. The blocks include the phase-locked loop (PLL), reactive-power controller (RPC), alternating-voltage controller (AVC), active-power controller (APC) and DC-controller (DCC).\cite{Robert}}
+\label{vectorcurrent}
+\end{figure} 
+
+Vector-current control consists of inner and outer control loops \cite{NTNU}\cite{Robert}. Fig.~\ref{vectorcurrent} shows that the outer control loop feeds the reference currents to the inner control loop in order to maintain an adequate reference voltage for the VSC. Depending on the mode of operation, reference $i_d^{\text{ref}}$ is used to control the active power or DC voltage. Similarly, reference $i_q^{\text{ref}}$ is used to control the reactive power or AC voltage. There are several ways to calculate the reference currents. In this work, a PI controller with feed-forward is used. For instance, if the active and reactive powers are controlled, the reference currents can be calculated as
+\begin{equation}
+\label{eq:feedforward}
+\mathbf{i}_{dq}^{\text{ref}}=\frac{1}{V}\begin{pmatrix}P^{\text{ref}}+(k_{po}+\frac{\displaystyle k_{io}}{s})(P^{\text{ref}}-P)\\
+ -Q^{\text{ref}}-(k_{po}+\frac{\displaystyle k_{io}}{s})(Q^{\text{ref}}-Q)
+\end{pmatrix},
+\end{equation} 
+where $V=|\mathbf{v}_{dq}|=\sqrt{v_d^2+v_q^2}$ is the voltage magnitude at the converter bridge.
+
+Then, the reference currents $i_d^{\text{ref}}$ and $i_q^{\text{ref}}$ will become input signals for the inner control loop. Inside the inner control loop, the relationship between converter current $\mathbf{i}_{dq}=\begin{pmatrix}
+i_d & i_q
+\end{pmatrix}^T$, bridge AC voltage $\mathbf{v}_{dq}=\begin{pmatrix}
+v_d & v_q
+\end{pmatrix}^T$, and AC line voltage $\mathbf{u}_{dq}~=~\begin{pmatrix}
+u_d & u_q
+\end{pmatrix}^T,$ in dq-plane is
+
+\begin{equation}
+\label{eq:voltage}
+\mathbf{v}_{dq}=\mathbf{u}_{dq}+\omega_1 L\begin{pmatrix}
+i_{q} \\ -i_d
+\end{pmatrix}-L\frac{d \mathbf{i}_{dq}}{dt},
+\end{equation}
+where $\omega_1$ is the angular frequency of an AC system, $L$ is the leakage inductance of the transformer. This equation shows that the system is coupled. Thus, a decoupler is added to the inner feedback loop of the system so that a diagonal PI controller can be implemented, which can be expressed as:
+\begin{equation}
+\label{eq:PI}
+F_{\text{PI}}(s)=-\begin{pmatrix}
+k_{pi}+{\frac{\displaystyle k_{ii}}{s}} & 0 \\ 
+0 & k_{pi}+{\frac{\displaystyle k_{ii}}{s}}
+\end{pmatrix} .
+\end{equation}
+
+Therefore, the ultimate control law for the inner control loop
+%as shown in Fig.~\ref{innercontrol}, 
+can be formulated as:
+\begin{equation}
+\begin{split}
+\label{eq:finalcontrol_proportional}
+\mathbf{v}_{dq}^{\text{ref}}=\begin{pmatrix}
+u_d \\ u_q
+\end{pmatrix}+F_{\text{PI}}(s)\begin{pmatrix}
+  i_{d}^{\text{ref}}-i_{d} \\ i_{q}^{\text{ref}}-i_{q}
+\end{pmatrix}  +\omega_1 L\begin{pmatrix}
+i_{q} \\ -i_d
+\end{pmatrix}.
+\end{split}
+\end{equation}
+
+%\begin{figure}
+%\centering
+%\includegraphics[width=0.2\textwidth]{innercontrol}
+%\caption{Detailed diagram that illustrates the separate PI-controllers and the reference voltages. The separate PI-controllers are given by $\text{PI}=k_p+\frac{k_i}{s}$}
+%\label{innercontrol}
+%\end{figure}
+
+
+%It can control the real and reactive power independently through fast inner current control loop [1] by separating the system currents in to dq components. Where d components are used to control the active power or direct voltage and q components are used to control reactive power or AC voltage. Inner controller controls converter current to a desired level. This current is provided by the outer controller and generates three phase AC voltage references to feed the controlled voltage source. Outer controller controls active power, reactive power, DC voltage and AC voltage of the system. All the measured three phase voltages and currents from the grid side are taken to control the power and voltage in the outer controller. In vector control, AC voltages and currents occur as constant vector form in steady state therefore static error in the control system can be removed from the signal by the PI controllers [16].Vector control schematic is shown in figure 3.3. ***********
+%
+%In DIMC, the three-phase currents and voltages are transformed to $d$ and $q$ axes, which makes the fundamental current and voltages become DC components. Therefore, PI-controllers can be used to reduce steady state errors. The final step is to transform the $d$ and $q$ voltages to three-phase quantities.
+%
+%The relationship between the converter current $\mathbf{i}_{dq}=\begin{pmatrix}
+%i_d & i_q
+%\end{pmatrix}^T$, the bridge AC voltage $\mathbf{v}_{dq}=\begin{pmatrix}
+%v_d & v_q
+%\end{pmatrix}^T$, and the AC line voltage $\mathbf{u}_{dq}~=~\begin{pmatrix}
+%u_d & u_q
+%\end{pmatrix}^T,$ in the dq-plane is
+%
+%\begin{equation}
+%\label{eq:voltage}
+%\mathbf{v}_{dq}=\mathbf{u}_{dq}+\omega_1 L\begin{pmatrix}
+%i_{q} \\ -i_d
+%\end{pmatrix}-L\frac{d \mathbf{i}_{dq}}{dt}-r \mathbf{i}_{dq},
+%\end{equation}
+%where $\omega_1$ is the angular frequency of the AC system, $L$ is the leakage inductance of the transformer, and $r$ is the interconnecting resistance. The resistance $r$ in high voltage applications is usually small and therefore neglected. Therefore, an approximation of each element of $\mathbf{v}_{dq}$ in~\eqref{eq:voltage} gives
+%\begin{equation}
+%\label{eq:voltage1}
+%\begin{split}
+%v_d=u_d+\omega_1 L i_q-L\frac{di_d}{dt},\\
+%v_q=u_q-\omega_1 L i_d-L\frac{di_q}{dt}.
+%\end{split}
+%\end{equation}
+%The system is obviously coupled. Therefore, a decoupler  is added to an inner feedback loop of the system. By letting 
+%\begin{equation}
+%\label{eq:voltage2}
+%\begin{split}
+%v_d=u_d+v_d^{\prime}+\omega_1 L i_q,\\
+%v_q=u_q+v_q^{\prime}-\omega_1 L i_d,
+%\end{split}
+%\end{equation}
+%the decoupled system becomes
+%\begin{equation}
+%\label{eq:voltage3}
+%\begin{split}
+%v_d^{\prime}=-L\frac{di_d}{dt},\\
+%v_q^{\prime}=-L\frac{di_q}{dt}.
+%\end{split}
+%\end{equation}
+%The transfer function from $\mathbf{v}_{dq}^{\prime}$ to $\mathbf{i}_{dq}$ is therefore given by
+%\begin{equation}
+%\label{eq:transfer}
+%G_d(s)=\begin{pmatrix}
+%-\frac{1}{sL} & 0 \\ 
+%0 & -\frac{1}{sL}
+%\end{pmatrix} .
+%\end{equation}
+%The system represented by \eqref{eq:transfer} is controlled using a cascade control structure. Therefore, an \textit{inner control loop} and an \textit{outer control loop} are designed.
+%\subsection{Vector-Current Control Inner Loop}
+%The transfer function in~\eqref{eq:transfer} is decoupled and can therefore be controlled with a diagonal PI-controller, which means that the $d$ and $q$ components can be controlled independently as two single-variable systems. An illustration of the decoupling is shown in Figure \ref{fig:control_diagram}. The PI-controller can be expressed as
+%\begin{equation}
+%\label{eq:PI}
+%F_{\text{PI}}(s)=-\begin{pmatrix}
+%k_{p}+\frac{k_{i}}{s} & 0 \\ 
+%0 & k_{p}+\frac{k_{i}}{s}
+%\end{pmatrix} .
+%\end{equation}
+%The decoupled system has a negative transfer function; therefore, the PI-controller is implemented with a minus sign.
+%
+%%\begin{figure}
+%%\centerline{
+%%\begin{tabular}{c}
+%%\subfloat[Block-diagram of the feedback loop. $F_{\text{PI}}(s)$ is the diagonal PI-controller and $G(s)$ is the system transfer function.]{\label{fig:a}\includegraphics[trim=0cm 10cm 0cm 10cm, clip=true,scale=0.4]{IMC}} \\ 
+%%\subfloat[Detailed diagram that illustrates the separate PI-controllers and the reference voltages. The separate PI-controllers are given by $\text{PI}=k_p+\frac{k_i}{s}$.]{\label{fig:b}\includegraphics[trim=3cm 11cm 3cm 11cm, clip=true,scale=0.56]{inner}} \\ 
+%%\end{tabular} 
+%%}
+%%\caption{The inner control loop of vector-current control. The inner control loop has an inner decoupling. Basically, Figure \ref{fig:a} and \ref{fig:b} are two ways to represent the same controller. However, Figure \ref{fig:a} gives a better overview of the diagonal transfer function $G_d(s)$. }
+%%\label{fig:control_diagram}
+%%\end{figure}
+%For some implementations, a low pass filter $H_{\text{LP}}(s)$ is added to the control law to improve disturbance rejection. 
+%
+%Assuming $\mathbf{v}_{dq}^{\text{ref}}=\mathbf{v}_{dq}$ yields the following control law
+%\begin{equation}
+%\begin{split}
+%\label{eq:finalcontrol_proportional}
+%\mathbf{v}_{dq}^{\text{ref}}=\begin{pmatrix}
+%u_d \\ u_q
+%\end{pmatrix}+F_{\text{PI}}(s)\begin{pmatrix}
+%  i_{d}^{\text{ref}}-i_{d} \\ i_{q}^{\text{ref}}-i_{q}
+%\end{pmatrix}  +\omega_1 L\begin{pmatrix}
+%i_{q} \\ -i_d
+%\end{pmatrix},
+%\end{split}
+%\end{equation}
+%
+%where the references $i_d^{\text{ref}}$ and $i_q^{\text{ref}}$ are given by an outer control loop. The current control in~\eqref{eq:finalcontrol_proportional} is referred to as the inner control loop. 
+%\subsection{Vector-Current Control Outer Loop}
+%The outer control loop feeds the reference current to the inner control loop in order to maintain an adequate reference voltage for the VSC. 
+%Depending on the mode of operation, the reference $i_d^{\text{ref}}$ is used to control the active power or direct voltage. In the same way, the reference $i_q^{\text{ref}}$ is used to control the reactive power or AC voltage. 
+%
+%There are several ways to calculate the reference currents. 
+%In this paper, an integral controller with feed-forward is used. When the active- and reactive powers are controlled, the reference currents are calculated as
+%\begin{equation}
+%\label{eq:feedforward}
+%\mathbf{i}_{dq}^{\text{ref}}=\frac{1}{V}\begin{pmatrix}P_{\text{ref}}+\frac{k_i}{s}(P_{\text{ref}}-P)\\
+% -Q_{\text{ref}}-\frac{k_i}{s}(Q_{\text{ref}}-Q)
+%\end{pmatrix},
+%\end{equation} 
+%where $V=|\mathbf{v}_{dq}|=\sqrt{v_d^2+v_q^2}$ is the voltage magnitude at the converter bridge.
+%
+%As an alternative to the traditional PI-controller, \cite{IP-PI} explored the properties of an IP-controller and showed some advantages compared to the PI-controller for implementations on DC drives. In order to control alternating and direct voltages, models in this paper utilizes IP-controllers. Using an IP-controller, the reference currents for direct- and alternating voltages are calculated as
+%\begin{equation}
+%\label{eq:DCcontrollIP}
+%\mathbf{i}_{dq}^{\text{ref}}=\begin{pmatrix}\frac{k_i}{s}(U_{\text{DC}}^{\text{ref}}-U_{\text{DC}})-k_pU_{\text{DC}} \\
+% \frac{k_i}{s}(U^{\text{ref}}-U)-k_pU\end{pmatrix},
+%\end{equation}
+%where $U=|\mathbf{u}_{dq}|=\sqrt{u_d^2+u_q^2}$ is the voltage magnitude at the primary side of transformer and $U_{\text{DC}}$ is the direct voltage. If preferred, it is also possible to control the voltage at the AC converter bridge instead of primary side of transformer by replacing $U$ with $V$. In order to improve disturbance rejection a low pass filter $H_{\text{LP}}(s)$ can be added for the controllers in \eqref{eq:feedforward} and \eqref{eq:DCcontrollIP}.
+%
+%In addition to \eqref{eq:feedforward} and \eqref{eq:DCcontrollIP}, there are two more control modes. If the system is configured to control the active power and the AC voltage, the reference currents are calculated as 
+%\begin{equation}
+%\label{eq:c}
+%\mathbf{i}_{dq}^{\text{ref}}=\begin{pmatrix}\frac{1}{V}[P_{\text{ref}}+\frac{k_i}{s}(P_{\text{ref}}-P)] \\
+%\frac{k_i}{s}(U^{\text{ref}}-U)-k_pU\end{pmatrix},
+%\end{equation}
+%and if the system is configured to control the direct voltage and the reactive power, the reference currents are calculated as 
+%\begin{equation}
+%\label{eq:cc}
+%\mathbf{i}_{dq}^{\text{ref}}=\begin{pmatrix}\frac{k_i}{s}(U_{\text{DC}}^{\text{ref}}-U_{\text{DC}})-k_p U_{\text{DC}}\\
+% \frac{1}{V}[-Q_{\text{ref}}-\frac{k_i}{s}(Q_{\text{ref}}-Q)]
+%\end{pmatrix}.
+%\end{equation} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Test systems}
+Three test systems, a one-terminal VSC, a point-to-point VSC-HVDC link, and a four-terminal VSC DC grid, were developed to validate the proposed VSC model and its control schemes.   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{One terminal VSC}
+Figure~\ref{vsc} depicts the one-terminal VSC test system. Its parameters are given in Table~\ref{oneterminal}.
+\begin{table}[!ht]
+\centering
+\caption{Parameters for the one-terminal VSC test system}
+\begin{tabular}{| c | c |}
+\hline
+DC capacitor & 195$\mu F$ \\\hline
+Reactance of phase reactor & 0.15$pu$ \\\hline
+Carrier frequency & 1.5$kHz$ \\\hline
+Nominal apparent power ($S_n$) & 1000 MVA  \\\hline
+DC voltage & 640 $kV$ \\\hline
+Nominal line voltage (rms) & 380 $kV$ \\\hline
+Reactance of transformer leakage inductance & 0.18 $pu$ \\\hline
+AC source voltage (line to line) & 380 $kV$ \\\hline
+AC source three-phase short circuit level at base voltage & 10000 MVA \\\hline
+AC source $X/R$ ratio & 10 \\\hline
+\end{tabular}
+\label{oneterminal}
+\end{table}
+
+The PI controllers in both outer and inner control loops were tuned to obtain the desired responses. The tunning method and tests can be found in \cite{Rokib}. The tuned parameters of PI controllers for one-terminal VSC test system are shown in Table~\ref{oneterminalPI}.
+\begin{table}[!ht]
+\centering
+\caption{PI controller parameters for the one-terminal VSC test system}
+\begin{tabular}{| c | c | c | c | c | }
+\hline
+Parameters & $k_{io}$ & $k_{po}$ & $k_{ii}$ & $k_{pi}$ \\\hline
+Values & 1.18 & 3.02 & 16.6 & 0.1533\\\hline
+%Parameters & Values  \\\hline
+%$k_io$ & 1.18\\\hline
+%$k_po$ & 3.02 \\\hline
+%$k_ii$ & 16.6\\\hline
+%$k_pi$ & 0.1533 \\\hline
+%PI parameters & $K_p$ & $K_i$  \\\hline
+%DC voltage controller & 6 & 200\\\hline
+%Active power controller & 0 & 30 \\\hline
+%Reactive power controller & 0 & 30\\\hline
+\end{tabular}
+\label{oneterminalPI}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Point-to-point VSC-HVDC link}
+Figure \ref{2terminals} shows the point-to-point VSC-HVDC link test system, where two one-terminal VSC models are connected by a 750 km-long DC cable. This cable's parameters are shown in Table \ref{twoterminals}. 
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.45\textwidth]{2terminals}
+\caption{Circuit diagram of the point-to-point VSC HVDC link}
+\label{2terminals}
+\end{figure}
+\begin{table}[!ht]
+\centering
+\caption{DC cable's parameters for the point-to-point VSC-HVDC link test system}
+\begin{tabular}{| c | c | }
+\hline
+Parameters & Values per $km$   \\\hline
+Line inductance & 1.5900$\times10^{-7}$\\\hline
+Line capacitance & 2.300$\times10^{-7}$  \\\hline
+Line resistance & 1.300$\times10^{-3}$ \\\hline
+\end{tabular}
+\label{twoterminals}
+\end{table}
+
+In a point-to-point VSC-VHDC link, one terminal behaves as a rectifier and the other as an inverter. Its bi-directional power flow can be regulated by the outer control loop as presented in Subsection \ref{sec:VSCcontrol}. Although both DC voltage control and active power control belong to the \emph{d}-axis control mode, note that only one DC voltage control is allowed in each DC grid. Thus, either rectifier or inverter can be chosen for DC voltage control and the other one has to be with active power control. With respect to the \emph{q}-axis control mode, it is free for both rectifier and inverter to choose either AC voltage control or reactive power control. Inside the rectifier and inverter, same converter parameters shown in Table \ref{oneterminal} were used and the tuned parameters for PI controllers are shown in Table~\ref{twoterminalsPI}.
+\begin{table}[!ht]
+\centering
+\caption{PI controller parameters for the point-to-point VSC-VHDC link test system}
+\begin{tabular}{| c | c | c | c | c | }
+\hline
+Parameters & $k_{io}$ & $k_{po}$ & $k_{ii}$ & $k_{pi}$ \\\hline
+Values & 1.18 & 3.02 & 8.3 & 0.0767\\\hline
+%Parameters & Values  \\\hline
+%$k_io$ & 1.18\\\hline
+%$k_po$ & 3.02 \\\hline
+%$k_ii$ & 8.3\\\hline
+%$k_pi$ & 0.0767 \\\hline
+\end{tabular}
+\label{twoterminalsPI}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Four-terminal VSC DC grid}
+In the four-terminal VSC DC grid, four VSCs are connected together with a configuration shown in Fig. \ref{4terminals}. 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.45\textwidth]{4terminals}
+\caption{Configuration of the four-terminal VSC DC grid}
+\label{4terminals}
+\end{figure}
+
+The same parameters of converter and DC cables for the point-to-point VSC-VHDC link were used here. However, instead of using constant DC voltage control or active power control, DC voltage droop control was applied. This control scheme is commonly used in multi-terminal DC grids to provide a linear change on the DC voltage as the active power reference changes \cite{Rokib}. Figure~\ref{droop} shows the characteristics of a DC voltage droop controller, which can be modeled by 
+\begin{equation}
+(V_{dc}^{ref0}-V_{dc}^{ref1})\times K_{droop}=P_{dc}^{ref1}-P_{dc}^{ref0}
+\end{equation}
+\begin{figure}
+\centering
+\includegraphics[width=0.2\textwidth]{droop}
+\caption{Characteristics of a DC voltage droop controller}
+\label{droop}
+\end{figure}
+The corresponding controller parameters are shown in Table~\ref{4terminalsPI}.
+\begin{table}[!ht]
+\centering
+\caption{PI controller parameters for the four-terminal VSC DC grid test system}
+\begin{tabular}{| c | c | c | c | c | }
+\hline
+Parameters & $K_{droop}$(inverter1) & $K_{droop}$(inverter2) & $k_{ii}$ & $k_{pi}$ \\\hline
+Values & 0.1 & 0.1 & 16.6 & 0.1533\\\hline
+%Parameters & Values  \\\hline
+%$K_{droop}$(inverter1) & 0.1\\\hline
+%$K_{droop}$(inverter2) & 0.1 \\\hline
+%$k_ii$ & 16.6\\\hline
+%$k_pi$ & 0.1533 \\\hline
+\end{tabular}
+\label{4terminalsPI}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Simulation models and experimental validation platform}
+These three test systems were implemented into different simulation tools and a hardware-based emulation platform to validate the proposed VSC model and its control schemes. \texttt{Matlab/Simulink} was firstly used to carry out off-line simulation; then, real-time simulation using \texttt{Opal-RT}'s real-time simulator was performed; finally, three of the test systems were slightly modified to adapt to the experimental platform due to its power and voltage rating limitations, on which experimental tests were performed. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{\texttt{Matlab/Simulink} off-line simulation models}
+\texttt{Matlab/Simulink} was utilized for off-line simulation. Due to space limitations, only one screenshot of a test system implementation is shown in Fig.~\ref{Simulink}.
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.45\textwidth]{Simulink}
+\caption{Graphical implementation of the point-to-point VSC-HVDC link test system in Matlab/Simulink \cite{Naveed}}
+\label{Simulink}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Real-time simulation}
+\texttt{Opal-RT} real-time simulators enable to run simulation in real-time, i.e. 1$s$ in simulation equals to 1$s$ in real life. The goal of implementing models into the real-time simulator is two-fold: (i) to perform fast simulation of the models, and (ii) to exploit the models in hardware-in-the-loop tests with external VSC controls in the future. 
+
+To implement a test system into \texttt{RT-LAB}, which is the user interface software of \texttt{Opal-RT} real-time simulators, the entire system has to be re-arranged into three subsystems referred to as master, slave, and console subsystems \cite{Rokib}. Both the master and slave subsystems can contain computational elements of the model, mathematical operation blocks, input-output blocks, signal generator, etc.; while the console subsystem contains, as its names implies, various console components, such as voltage meters, current meters, etc. One screenshot of a test system implementation is shown in Fig.~\ref{Opal}.
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.45\textwidth]{Opal}
+\caption{Graphical implementation of the point-to-point VSC-HVDC link test system in RT-LAB \cite{Rokib}}
+\label{Opal}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Experimental platform designed and built by CITCEA-UPC for validation}
+An experimental platform had been designed and built up by CITCEA-UPC for multu-terminal VSC-HVDC transmission system study \cite{Agusti}. The developed setup emulates the behavior of a real HVDC system. The system consists of four VSC converters connected in the DC side by means of a DC grid. A wind farm is emulated using a squirrel cage induction motor which is mechanically coupled to a squirrel cage induction generator which is connected to the wind farm VSC. A photograph and a scheme of the system are shown in Fig.~\ref{platform1} and \ref{platform2}, respectively.
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.4\textwidth]{platform1}
+\caption{Photograph of the experimental platform \cite{Agusti}}
+\label{platform1}
+\end{figure}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.48\textwidth]{platform2}
+\caption{Scheme of of the experimental platform \cite{Agusti}}
+\label{platform2}
+\end{figure}
+
+The VSC power converter used in the experimental platform is a two level converter based on IGBTs. The whole device is composed by three boards: the power board, the drivers board and the control board. The control board is based on a Texas Instruments Digital Signal Processor (DSP) TMS320F2808. The DSP interacts with the IGBTs by means of a driver board that provides the necessary gate-excitation signals and also introduces the dead-time. In addition, the drivers board has analogue-based protections, that disconnect the power converter in case of over-current, over-temperature, over-voltage or drivers error. Each grid side power converter is connected to the AC grid by means of an inductance. Nominal values of the system can be seen in Table~\ref{platformParameters}.
+\begin{table}[!ht]
+\centering
+\caption{Experimental platform parameters}
+\begin{tabular}{| c | c | }
+\hline
+Parameters & Values  \\\hline
+Nominal DC voltage & 800 $V$\\\hline
+Nominal AC current & 15 $A$  \\\hline
+Maximum switching frequency & 20$kHz$ \\\hline
+Coupling inductance & 4.6$mH$\\\hline
+Coupling resistance & 0.5$omega$\\\hline
+\end{tabular}
+\label{platformParameters}
+\end{table}
+
+In order to test and verify the proposed generic VSC model and its control schemes, this platform accommodated the different configurations and specifications of the three test systems.
+%The power board is composed by a module of three legs of IGBT's with an additional branch to provide brake capability. The available measurements include two AC voltages, two AC currents and the DC current and voltage. Furthermore, an AC switch permits to connect the power converter once it is synchronized with the AC grid. A DC switch allows to connect each power converter with the other converters of the experimental setup. 
+%The power board elements are sketched in Fig.~\ref{powerboard}.
+% \begin{figure}[!ht]
+%\centering
+%\includegraphics[width=0.45\textwidth]{powerboard}
+%\caption{Scheme of of the power converter board}
+%\label{powerboard}
+%\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Results and analysis}
+For the one-terminal VSC test system, a comparison between simulation results and emulation results in steady state are shown in Fig.~\ref{results_1}. As we can see, they have a perfect match. 
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.48\textwidth]{results_1}
+\caption{Comparison between simulation and emulation results of the one-terminal VSC test system in steady state.}
+\label{results_1}
+\end{figure}
+
+For the point-to-point VSC-HVDC link test system, Fig.~\ref{results_2} shows the active power and the DC voltage during an active power reference change at GSC2 (the inverter). The power was changed from 0.2 to 1 $p.u.$. From the active power point of view the system was evolving as a first order system with a time constant of 60 $ms$. The DC voltage at GSC1 (the rectifier) suffered a very small perturbation and the DC voltage at GSC2 (the inverter) changed the steady state equilibrium point due to the increase of the exchanged active power. Simulation and emulation results match well.
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.48\textwidth]{results_2}
+\caption{Comparison between simulation and emulation results of the point-to-point VSC-HVDC link test system during an active power reference change.}
+\label{results_2}
+\end{figure}
+
+A power converter disconnection scenario was applied on the four-terminal VSC DC grid. GS1, one of the inventers shown in Fig.~\ref{platform2}, was disconnected at $t=0.9$ $s$. Fig.~\ref{results_4} shows the DC currents and voltages. Once the GS1 was disconnected, the voltage of the DC grid increased by the droop control of GS2. As the droop control was not saturated no power reduction methods were needed. Note that currents of WF1 and WF2 suffered a small decrease due to the voltage increase. In addition, the DC grid voltage reached a new nominal operational point of 1.045 $p.u.$ at time instant of 1.05 $s$. Simulations show the same performance as the emulations.
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.48\textwidth]{results_4}
+\caption{Comparison between simulation and emulation results of the four-terminal VSC DC grid test system during a disconnection of GS1.}
+\label{results_4}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusion}
+This paper briefly presents partial outcomes of the KIC InnoEnergy project: Generic DC grid off-line and real-time simulation models and tools (Action 2.1 Subtask 2.1.1). A generic VSC model and its control systems are introduced. Three different test systems were developed and implemented in \texttt{Matlab/Simulink} for off-line simulations, in \texttt{RT-LAB} for real-time simulations, and in the experimental platform for emulations. Due to space limitations, only a few simulation and emulation results are shown in this paper. Nevertheless, these results have illustrated that the control schemes perform satisfactorily during different perturbations. In addition, consistent performances between simulation and emulation results validate the validity and applicability  of the proposed generic VSC model. Therefore, they can be freely and widely applied for academic studies and research. 
+% conference papers do not normally have an appendix
+
+
+% use section* for acknowledgement
+%\section*{Acknowledgment}
+%
+%
+%The authors would like to thank...
+%
+%
+
+
+
+% trigger a \newpage just before the given reference
+% number - used to balance the columns on the last page
+% adjust value as needed - may need to be readjusted if
+% the document is modified later
+%\IEEEtriggeratref{8}
+% The "triggered" command can be changed if desired:
+%\IEEEtriggercmd{\enlargethispage{-5in}}
+
+% references section
+
+% can use a bibliography generated by BibTeX as a .bbl file
+% BibTeX documentation can be easily obtained at:
+% http://www.ctan.org/tex-archive/biblio/bibtex/contrib/doc/
+% The IEEEtran BibTeX style support page is at:
+% http://www.michaelshell.org/tex/ieeetran/bibtex/
+%\bibliographystyle{IEEEtran}
+% argument is your BibTeX string definitions and bibliography database(s)
+%\bibliography{IEEEabrv,../bib/paper}
+%
+% <OR> manually copy in the resultant .bbl file
+% set second argument of \begin to the number of references
+% (used to reserve space for the reference number labels box)
+\begin{thebibliography}{1}
+
+\bibitem{Zhang} 
+L. Zhang, ``Modeling and control of VSC-HVDC links connected to weak ac systems,” Ph.D. dissertation, KTH, Electrical Machines and Power Electronics, 2010.
+
+\bibitem{Naveed} 
+L. Vanfretti, N. A. Khan, W. Li, M. R. Kasan, and A. Haider, ``Generic VSC and Low Level Switching Control Models for Offline Simulation of VSC-HVDC Systems", {\em Electric Power Quality and Supply Reliability}, June, 2014.
+
+\bibitem{Rokib} 
+M. R. Hasan, L. Vanfretti, and W. Li, ``Generic High Level VSC-HVDC Grid Controls and Test Systems for Offline and Real Time Simulation", {\em Electric Power Quality and Supply Reliability}, Jun., 2014.
+
+\bibitem{Shire}
+T. W. Shire, "VSC-HVDC based Network Reinforcement," Delft University of Technology, Delft, 2009.
+
+\bibitem{NTNU} 
+T. M. Haileselassie, ``Control, Dynamics and Operation of Multi-terminal VSC-HVDC Transmission Systems", Ph.D. dissertation, Dept. Elect. Pow. Eng., NTNU, Trondheim, Noway, 2012. 
+
+%\bibitem{ABB}
+%ABB, \emph{Its time to connect - Technical description of HVDC Light \textregistered  technology}.
+
+%\bibitem{Harnefors} 
+%L. Harnefors and H.-P. Nee, ``Model-based current control of AC machines using the internal model control method,” {\em IEEE Trans. Industry App.}, vol. 34, no. 1, pp. 133–141, 1998.
+
+\bibitem{Robert} 
+R. Rogersten, L. Vanfretti, W. Li, L. Zhang, and P. Mitra, ``A Quantitative Method for the Assessment of
+VSC-HVdc Controller Simulations in EMT Tools", {\em IEEE ISGT Europe}, Oct, 2014.
+
+\bibitem{Agusti}
+A. Egea-\`{A}lvarez, F. Bianchi, A. Junyent-Ferr\'{e}, G. Gross, and O. Gomis-Bellmunt, ``Voltage Control of Multiterminal VSC-HVDC Transmission System for Offshore Wind Power Plants: Design and Implementation in a Scaled Platform", {\em IEEE Trans. Industrial Elect.}, vol. 60, no. 6, pp. 2381–2391, Jun. 2013.
+
+%\bibitem{Cuiqing} 
+%C. Du, ``VSC-HVDC for Industrial Power Systems", Ph.D. dissertation, Dept. Ene. Env, Chalmers Univ. of Tec., G\"{o}teborg, Sweden, 2007.
+
+\end{thebibliography}
+
+
+
+
+% that's all folks
+\end{document}
+
+
